@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #C11369;
+  --color-secondary: #049FE3;
+  --color-dark: #333333;
+  
+  --font-family-heading: var(--font-heading);
+  --font-family-body: var(--font-body);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
