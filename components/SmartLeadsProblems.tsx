@@ -1,8 +1,8 @@
 "use client"
 import { useEffect, useRef, useState } from 'react'
-import { AlertCircle, TrendingDown, Brain, Users, CheckCircle } from 'lucide-react'
+import { AlertCircle, TrendingDown, Brain, Users, CheckCircle, ArrowRight } from 'lucide-react'
 
-export default function ProblemsSection() {
+export default function SmartLeadsProblems() {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
 
@@ -26,28 +26,28 @@ export default function ProblemsSection() {
   const problems = [
     {
       icon: <TrendingDown className="w-6 h-6" />,
-      title: "Brak jakościowych leadów / Brak sprzedaży",
-      description: "Kampanie nie generują jakościowych leadów / sprzedaży w e-commerce"
+      title: "Brak jakościowych leadów",
+      description: "Kampanie generują dużo kontaktów, ale większość to osoby niezdecydowane, szukające darmowych porad lub podające fałszywe dane"
     },
     {
       icon: <AlertCircle className="w-6 h-6" />,
       title: "Niewykorzystane dane",
-      description: "Słabe wykorzystanie posiadanych danych do poprawy skuteczności reklam (dane z analityki) oraz procesu sprzedaży (dane z CRM/sklepu)"
+      description: "Masz Google Analytics pełne informacji i CRM z historią klientów, ale nie wiesz jak to wykorzystać do lepszych kampanii i wyższych konwersji"
     },
     {
       icon: <Brain className="w-6 h-6" />,
       title: "Zagubienie w AI",
-      description: "Pogubienie w dostępnych narzędziach AI oraz optymalnym ich wykorzystaniu w swoim biznesie"
+      description: "Wszędzie słyszysz o automatyzacji i sztucznej inteligencji, ale nie wiesz jak zastosować to w swojej firmie usługowej"
     },
     {
       icon: <Users className="w-6 h-6" />,
       title: "Złe doświadczenia z agencjami",
-      description: "Złe doświadczenia w dotychczasowej współpracy z agencjami / freelancerami: niskie zaangażowanie, słaby kontakt, czasem brak wystarczającej wiedzy"
+      description: "Poprzednie współprace z agencjami lub freelancerami kończyły się rozczarowaniem: niskie zaangażowanie, słaby kontakt, brak konkretnych wyników"
     }
   ]
 
   return (
-    <section ref={sectionRef} className="py-10 lg:py-10 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section ref={sectionRef} className="py-20 lg:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-red-500/5 to-orange-500/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tr from-gray-500/5 to-red-500/5 rounded-full blur-3xl" />
@@ -57,8 +57,8 @@ export default function ProblemsSection() {
         <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          <h2 className="font-heading text-2xl md:text-3xl lg:text-3xl font-bold text-[#333333] mb-6">
-            Najczęściej spotykane <span className="text-red-600">marketingowe problemy</span> MŚP,
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] mb-6">
+            Najczęściej spotykane <span className="text-red-600">problemy firm usługowych</span>,
             <br className="hidden md:block" />
             z którymi się spotykamy
           </h2>
@@ -129,10 +129,10 @@ export default function ProblemsSection() {
                   </div>
                   <div>
                     <p className="font-body text-gray-700 mb-2">
-                      Dlatego stworzyliśmy <span className="font-heading font-bold bg-gradient-to-r from-[#C11369] to-[#049FE3] bg-clip-text text-transparent">Smart Marketing</span>
+                      Dlatego stworzyliśmy <span className="font-heading font-bold bg-gradient-to-r from-[#C11369] to-[#049FE3] bg-clip-text text-transparent">SmartLeads</span>
                     </p>
                     <p className="font-heading text-xl font-semibold text-[#333333]">
-                      skuteczny model pozyskiwania klientów dla małych i średnich firm.
+                      skuteczny system pozyskiwania wartościowych leadów dla firm usługowych.
                     </p>
                   </div>
                 </div>
@@ -145,9 +145,7 @@ export default function ProblemsSection() {
                   className="group inline-flex items-center gap-2 text-[#C11369] font-heading font-semibold hover:gap-4 transition-all duration-300"
                 >
                   <span>Zobacz jak rozwiązujemy te problemy</span>
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                  <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
             </div>
