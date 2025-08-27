@@ -176,7 +176,7 @@ export default function Footer() {
               <a href="/polityka-prywatnosci" className="font-body text-gray-500 hover:text-[#C11369] transition-colors">
                 Polityka prywatności
               </a>
-              <a href="#" className="font-body text-gray-500 hover:text-[#333333] transition-colors">
+              <a href="/rodo" className="font-body text-gray-500 hover:text-[#333333] transition-colors">
                 RODO
               </a>
             </div>
