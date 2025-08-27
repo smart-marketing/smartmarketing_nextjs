@@ -173,11 +173,8 @@ export default function Footer() {
               © 2025 Smart Marketing. Wszystkie prawa zastrzeżone.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="font-body text-gray-500 hover:text-[#C11369] transition-colors">
+              <a href="/polityka-prywatnosci" className="font-body text-gray-500 hover:text-[#C11369] transition-colors">
                 Polityka prywatności
-              </a>
-              <a href="#" className="font-body text-gray-500 hover:text-[#049FE3] transition-colors">
-                Regulamin
               </a>
               <a href="#" className="font-body text-gray-500 hover:text-[#333333] transition-colors">
                 RODO

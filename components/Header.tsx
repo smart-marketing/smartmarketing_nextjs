@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Menu, X, Phone, Mail } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -29,13 +30,13 @@ export default function Header() {
   }, [lastScrollY])
 
   const navItems = [
-    { name: 'Home', href: '#' },
-    { name: 'O nas', href: '#o-nas' },
-    { name: 'Dla firm usługowych', href: '#uslugi' },
-    { name: 'Dla e-commerce', href: '#ecommerce' },
-    { name: 'Case studies', href: '#case-studies' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'Kontakt', href: '#kontakt' },
+    { name: 'Home', href: '/' },
+    { name: 'O nas', href: '/o-nas' },
+    { name: 'Dla firm usługowych', href: '/dla-firm-uslugowych' },
+    { name: 'Dla e-commerce', href: '/dla-ecommerce' },
+    { name: 'Case studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Kontakt', href: '/kontakt' },
   ]
 
   return (
@@ -82,14 +83,16 @@ export default function Header() {
           <nav className="flex items-center justify-between">
             {/* Logo */}
             <div className="relative z-50">
-              <Image
-                src="/logo.webp"
-                alt="Smart Marketing"
-                width={180}
-                height={60}
-                className="h-12 w-auto md:h-14"
-                priority
-              />
+              <Link href="/">
+                <Image
+                  src="/logo.webp"
+                  alt="Smart Marketing"
+                  width={180}
+                  height={60}
+                  className="h-12 w-auto md:h-14 cursor-pointer"
+                  priority
+                />
+              </Link>
             </div>
 
             {/* Desktop Navigation */}
@@ -97,12 +100,12 @@ export default function Header() {
               <ul className="flex gap-6 xl:gap-8">
                 {navItems.map((item) => (
                   <li key={item.name}>
-                    <a
+                    <Link
                       href={item.href}
                       className="font-heading font-medium transition-colors duration-200 text-[#333333] hover:text-[#C11369]"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -138,13 +141,13 @@ export default function Header() {
           <ul className="flex flex-col gap-8 text-center mb-12">
             {navItems.map((item) => (
               <li key={item.name}>
-                <a
+                <Link
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="text-2xl font-heading font-medium text-[#333333] hover:text-[#C11369] transition-colors"
                 >
                   {item.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
