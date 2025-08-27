@@ -2,18 +2,18 @@
 import { useEffect, useState } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { ArrowRight, TrendingUp, Target, Clock } from 'lucide-react'
-import SmartLeadsProblems from '@/components/SmartLeadsProblems'
-import SmartLeadsSolution from '@/components/SmartLeadsSolution'
-import SmartLeadsProcess from '@/components/SmartLeadsProcess'
-import SmartLeadsTarget from '@/components/SmartLeadsTarget'
-import SmartLeadsCases from '@/components/SmartLeadsCases'
-import SmartLeadsFAQ from '@/components/SmartLeadsFAQ'
+import SmartCommerceProblems from '@/components/SmartCommerceProblems'
+import SmartCommerceSolution from '@/components/SmartCommerceSolution'
+import SmartCommerceProcess from '@/components/SmartCommerceProcess'
+import SmartCommerceTarget from '@/components/SmartCommerceTarget'
+import SmartCommerceCases from '@/components/SmartCommerceCases'
+import SmartCommerceFAQ from '@/components/SmartCommerceFAQ'
 import CTASection from '@/components/CTASection'
 import ResourcesSection from '@/components/ResourcesSection'
 
+import { ArrowRight, TrendingUp, Target, Clock } from 'lucide-react'
 
-export default function SmartLeadsPage() {
+export default function SmartCommercePage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isVisible, setIsVisible] = useState(false)
 
@@ -34,17 +34,17 @@ export default function SmartLeadsPage() {
     <>
       <Header />
       <main className="min-h-screen bg-white">
-        {/* Hero Section - podobny do głównej strony */}
+        {/* Hero Section - identyczny design jak SmartLeads */}
         <section className="h-screen relative overflow-hidden flex items-center pt-24 lg:pt-20">
           {/* Animated gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50/50 to-white">
             <div className="absolute inset-0">
               <div 
-                className="absolute top-1/4 -right-1/4 w-[600px] h-[600px] bg-gradient-to-br from-[#C11369]/10 via-[#049FE3]/10 to-transparent rounded-full blur-3xl animate-pulse"
+                className="absolute top-1/4 -right-1/4 w-[600px] h-[600px] bg-gradient-to-br from-[#049FE3]/10 via-[#C11369]/10 to-transparent rounded-full blur-3xl animate-pulse"
                 style={{ transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)` }}
               />
               <div 
-                className="absolute bottom-1/4 -left-1/4 w-[600px] h-[600px] bg-gradient-to-tr from-[#049FE3]/10 via-[#C11369]/10 to-transparent rounded-full blur-3xl animate-pulse delay-700"
+                className="absolute bottom-1/4 -left-1/4 w-[600px] h-[600px] bg-gradient-to-tr from-[#C11369]/10 via-[#049FE3]/10 to-transparent rounded-full blur-3xl animate-pulse delay-700"
                 style={{ transform: `translate(${-mousePosition.x}px, ${-mousePosition.y}px)` }}
               />
             </div>
@@ -66,12 +66,12 @@ export default function SmartLeadsPage() {
                 }`}
               >
                 <span className="text-[#333333]">Zamieniamy </span>
-                <span className="bg-gradient-to-r from-[#C11369] to-[#049FE3] bg-clip-text text-transparent">
-                  chaotyczny marketing
+                <span className="bg-gradient-to-r from-[#049FE3] to-[#C11369] bg-clip-text text-transparent">
+                  chaotyczne kampanie
                 </span>
                 <br />
-                <span className="text-[#333333]">w przewidywalne źródło </span>
-                <span className="text-[#333333]">wartościowych leadów</span>
+                <span className="text-[#333333]">w przewidywalny </span>
+                <span className="text-[#333333]">wzrost sprzedaży online</span>
               </h1>
 
               {/* Transformation showcase */}
@@ -91,7 +91,7 @@ export default function SmartLeadsPage() {
                       <span className="font-heading font-semibold text-gray-600 uppercase text-xs tracking-wider">OD</span>
                     </div>
                     <p className="font-body text-sm md:text-base text-gray-700">
-                      frustracji <span className="font-semibold text-red-600">drogimi kampaniami</span> i przypadkowymi zapytaniami
+                      <span className="font-semibold text-red-600">przepalania budżetu</span> na reklamy które nie sprzedają
                     </p>
                   </div>
                 </div>
@@ -107,7 +107,7 @@ export default function SmartLeadsPage() {
                       <span className="font-heading font-semibold text-gray-600 uppercase text-xs tracking-wider">DO</span>
                     </div>
                     <p className="font-body text-sm md:text-base text-gray-700">
-                      <span className="font-semibold bg-gradient-to-r from-[#049FE3] to-[#C11369] bg-clip-text text-transparent">systematycznego pozyskiwania</span> klientów, którzy chcą współpracować
+                      <span className="font-semibold bg-gradient-to-r from-[#049FE3] to-[#C11369] bg-clip-text text-transparent">systematycznego zwiększania</span> obrotów i rentowności sklepu
                     </p>
                   </div>
                 </div>
@@ -121,11 +121,11 @@ export default function SmartLeadsPage() {
               >
                 <a
                   href="#kontakt"
-                  className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white px-8 py-4 rounded-full font-heading font-semibold hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                  className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#049FE3] to-[#C11369] text-white px-8 py-4 rounded-full font-heading font-semibold hover:shadow-2xl transition-all duration-300 hover:scale-105"
                 >
                   <span>Umów SmartCheck - sprawdź potencjał za 0 zł</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#049FE3] to-[#C11369] rounded-full opacity-0 group-hover:opacity-100 transition-opacity -z-10 blur-xl" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#C11369] to-[#049FE3] rounded-full opacity-0 group-hover:opacity-100 transition-opacity -z-10 blur-xl" />
                 </a>
               </div>
 
@@ -141,29 +141,29 @@ export default function SmartLeadsPage() {
                       <div key={i} className="w-8 h-8 bg-gradient-to-br from-gray-300 to-gray-400 rounded-full border-2 border-white" />
                     ))}
                   </div>
-                  <span className="font-body text-sm text-gray-600">50+ firm usługowych</span>
+                  <span className="font-body text-sm text-gray-600">30+ sklepów online</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="font-heading font-bold text-[#C11369]">5000+</span>
-                  <span className="font-body text-sm text-gray-600">wygenerowanych leadów</span>
+                  <span className="font-heading font-bold text-[#049FE3]">420%</span>
+                  <span className="font-body text-sm text-gray-600">średni wzrost ROAS</span>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <SmartLeadsProblems />
-        <SmartLeadsSolution />
-        <SmartLeadsProcess />
-        <SmartLeadsTarget />
-        <SmartLeadsCases />
-        <SmartLeadsFAQ />
-
+        {/* Tu możesz dodać kolejne sekcje specyficzne dla e-commerce */}
+        <SmartCommerceProblems />
+        <SmartCommerceSolution />
+        <SmartCommerceProcess />
+        <SmartCommerceTarget />
+        <SmartCommerceCases />
+        <SmartCommerceFAQ />
         <CTASection />
         <ResourcesSection />
 
-        {/* Tu możesz dodać więcej sekcji specyficznych dla SmartLeads */}
-        
+
+
       </main>
       <Footer />
 
