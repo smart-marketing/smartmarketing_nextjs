@@ -1,6 +1,7 @@
 "use client"
 import Image from 'next/image'
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, ArrowUp } from 'lucide-react'
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, ArrowUp, Youtube } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -25,8 +26,7 @@ export default function Footer() {
               className="h-14 w-auto mb-6"
             />
             <p className="font-body text-gray-600 mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Sed do eiusmod tempor incididunt ut labore.
+              Agencja marketingowa dla MŚP.
             </p>
             <div className="flex gap-4">
               <a
@@ -50,54 +50,63 @@ export default function Footer() {
               >
                 <Linkedin size={20} />
               </a>
+              <a
+                href="#"
+                className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-[#049FE3] hover:text-white transition-all duration-300"
+                aria-label="LinkedIn"
+              >
+                <Youtube size={20} />
+              </a>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-heading text-xl font-semibold mb-6 text-[#333333]">
-              Szybkie linki
-            </h3>
-            <ul className="space-y-3">
-              {['Strona główna', 'O nas', 'Usługi', 'Portfolio', 'Blog', 'Kontakt'].map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
-                    className="font-body text-gray-600 hover:text-[#C11369] transition-colors duration-200 flex items-center gap-2 group"
-                  >
-                    <span className="w-0 h-[2px] bg-[#C11369] group-hover:w-4 transition-all duration-300" />
-                    {item}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+        {/* Quick Links */}
+        <div>
+          <h3 className="font-heading text-xl font-semibold mb-6 text-[#333333]">
+            Szybkie linki
+          </h3>
+          <ul className="space-y-3">
+            {[
+              { name: 'O nas', href: '/o-nas' },
+              { name: 'Case studies', href: '/case-studies' },
+              { name: 'Blog', href: '/blog' },
+            ].map((item) => (
+              <li key={item.name}>
+                <Link
+                  href={item.href}
+                  className="font-body text-gray-600 hover:text-[#C11369] transition-colors duration-200 flex items-center gap-2 group"
+                >
+                  <span className="w-0 h-[2px] bg-[#C11369] group-hover:w-4 transition-all duration-300" />
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
 
           {/* Services */}
           <div>
             <h3 className="font-heading text-xl font-semibold mb-6 text-[#333333]">
               Nasze usługi
             </h3>
-            <ul className="space-y-3">
-              {[
-                'Marketing internetowy',
-                'Social Media',
-                'SEO & SEM',
-                'Strony internetowe',
-                'Branding',
-                'Content Marketing'
-              ].map((service) => (
-                <li key={service}>
-                  <a
-                    href="#"
-                    className="font-body text-gray-600 hover:text-[#049FE3] transition-colors duration-200 flex items-center gap-2 group"
-                  >
-                    <span className="w-0 h-[2px] bg-[#049FE3] group-hover:w-4 transition-all duration-300" />
-                    {service}
-                  </a>
-                </li>
-              ))}
-            </ul>
+          <ul className="space-y-3">
+            {[
+              
+              { name: 'Dla firm usługowych', href: '/dla-firm-uslugowych' },
+              { name: 'Dla e-commerce', href: '/dla-ecommerce' },
+              { name: 'Kontakt', href: '/kontakt' }
+            ].map((item) => (
+              <li key={item.name}>
+                <Link
+                  href={item.href}
+                  className="font-body text-gray-600 hover:text-[#049FE3] transition-colors duration-200 flex items-center gap-2 group"
+                >
+                  <span className="w-0 h-[2px] bg-[#049FE3] group-hover:w-4 transition-all duration-300" />
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
           </div>
 
           {/* Contact Info */}
@@ -129,12 +138,11 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <div className="w-8 h-8 bg-gradient-to-r from-[#049FE3] to-[#C11369] rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="w-8 h-8 bg-gradient-to-r from-[#049FE3] to-[#C11369] rounded-full flex items-center justify-center flex-shrink-0">
                   <MapPin size={14} className="text-white" />
                 </div>
                 <span className="font-body text-gray-600">
-                  Lorem ipsum dolor sit amet,<br />
-                  consectetur adipiscing elit
+                  Elbląg
                 </span>
               </li>
             </ul>
