@@ -25,7 +25,7 @@ export default function CaseStudiesPage() {
         value: "+450%"
       },
       image: "/case-garaze.jpg",
-      href: "/case-studies/garaze-blaszane"
+      href: "/case-studies/markostal"
     },
     {
       id: 2,

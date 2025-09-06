@@ -27,7 +27,7 @@ export default function CaseStudiesSection() {
     {
       id: 1,
       title: "Garaże Blaszane",
-      mainResult: "5000+ leadów",
+      mainResult: "5300+ leadów",
       timeFrame: "w 10 miesięcy",
       description: [
         "Konfigurator produktu zintegrowany z kampaniami reklamowymi",
@@ -42,7 +42,7 @@ export default function CaseStudiesSection() {
         label: "Wzrost leadów",
         value: "+450%"
       },
-      href: "#case-garaze"
+      href: "/case-studies/markostal"
     },
     {
       id: 2,
