@@ -229,7 +229,7 @@ export default function HeroSection() {
             </a>
             
             <a
-              href="#case-studies"
+              href="/case-studies"
               className="group inline-flex items-center gap-3 bg-white border-2 border-[#333333] text-[#333333] px-8 py-4 rounded-full font-heading font-semibold hover:bg-[#333333] hover:text-white transition-all duration-300"
             >
               <Target className="w-5 h-5" />
@@ -245,9 +245,11 @@ export default function HeroSection() {
           >
             <div className="flex items-center gap-2">
               <div className="flex -space-x-2">
-                {[1,2,3,4,5].map((i) => (
-                  <div key={i} className="w-8 h-8 bg-gradient-to-br from-gray-300 to-gray-400 rounded-full border-2 border-white" />
-                ))}
+                <img src="/investsolar.png" alt="InvestSolar" className="w-8 h-8 rounded-full border-2 border-white object-contain bg-white" />
+                <img src="/aiwa.png" alt="Aiwa" className="w-8 h-8 rounded-full border-2 border-white object-contain bg-white" />
+                <img src="/manta.webp" alt="Manta" className="w-8 h-8 rounded-full border-2 border-white object-contain bg-white" />
+                <img src="/hidrami.png" alt="Hidrami" className="w-8 h-8 rounded-full border-2 border-white object-contain bg-white" />
+                <img src="/logo-termo-expert.png" alt="TermoExpert" className="w-8 h-8 rounded-full border-2 border-white object-contain bg-white" />
               </div>
               <span className="font-body text-sm text-gray-600">50+ zadowolonych klientów</span>
             </div>

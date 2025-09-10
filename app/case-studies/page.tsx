@@ -3,6 +3,7 @@ import { useState } from 'react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import CTASection from '@/components/CTASection'
+import ResourcesSection from '@/components/ResourcesSection'
 import { ArrowRight, TrendingUp, Target, Zap, ShoppingCart, BarChart3, MapPin, Briefcase, Filter } from 'lucide-react'
 
 export default function CaseStudiesPage() {
@@ -127,7 +128,7 @@ export default function CaseStudiesPage() {
                 </div>
                 <div className="text-center">
                   <div className="font-heading text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#C11369] to-[#049FE3] bg-clip-text text-transparent">
-                    420%
+                    320%
                   </div>
                   <p className="font-body text-gray-600 mt-1">Średni wzrost ROAS</p>
                 </div>
@@ -251,6 +252,8 @@ export default function CaseStudiesPage() {
         </section>
 
         <CTASection />
+        
+                <ResourcesSection />
       </main>
       <Footer />
 

@@ -137,14 +137,14 @@ export default function SmartCommercePage() {
               >
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
-                    {[1,2,3,4,5].map((i) => (
-                      <div key={i} className="w-8 h-8 bg-gradient-to-br from-gray-300 to-gray-400 rounded-full border-2 border-white" />
-                    ))}
+                    <img src="/aiwa.png" alt="Aiwa" className="w-8 h-8 rounded-full border-2 border-white object-contain bg-white" />
+                    <img src="/manta.webp" alt="Manta" className="w-8 h-8 rounded-full border-2 border-white object-contain bg-white" />
+                    <img src="/logo-termo-expert.png" alt="TermoExpert" className="w-8 h-8 rounded-full border-2 border-white object-contain bg-white" />
                   </div>
                   <span className="font-body text-sm text-gray-600">30+ sklepów online</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="font-heading font-bold text-[#049FE3]">420%</span>
+                  <span className="font-heading font-bold text-[#049FE3]">320%</span>
                   <span className="font-body text-sm text-gray-600">średni wzrost ROAS</span>
                 </div>
               </div>

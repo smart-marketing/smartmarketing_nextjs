@@ -27,7 +27,7 @@ export default function TrustSection() {
   const logos = [
     { name: 'Aiwa', file: 'aiwa.png' },
     { name: 'Manta', file: 'manta.webp' },
-    { name: 'Bellezza', file: 'bellezza.png' },
+    { name: 'Elisa', file: 'elisa.png' },
     { name: 'Hidrami', file: 'hidrami.png' },
     { name: 'Tartak', file: 'tartak.png' },
     { name: 'Szynkowski', file: 'szynkowski.png' },

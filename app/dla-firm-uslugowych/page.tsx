@@ -58,7 +58,7 @@ export default function SmartLeadsPage() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-6xl mx-auto">
               {/* Main heading */}
               <h1 
                 className={`font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl font-bold text-center mb-6 leading-tight transition-all duration-1000 ${
@@ -137,9 +137,9 @@ export default function SmartLeadsPage() {
               >
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
-                    {[1,2,3,4,5].map((i) => (
-                      <div key={i} className="w-8 h-8 bg-gradient-to-br from-gray-300 to-gray-400 rounded-full border-2 border-white" />
-                    ))}
+                    <img src="/investsolar.png" alt="InvestSolar" className="w-8 h-8 rounded-full border-2 border-white object-contain bg-white" />
+                    <img src="/tartak.png" alt="Bielińscy Drewno" className="w-8 h-8 rounded-full border-2 border-white object-contain bg-white" />
+                    <img src="/hidrami.png" alt="Hidrami" className="w-8 h-8 rounded-full border-2 border-white object-contain bg-white" />
                   </div>
                   <span className="font-body text-sm text-gray-600">50+ firm usługowych</span>
                 </div>

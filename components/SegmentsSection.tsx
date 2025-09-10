@@ -31,7 +31,7 @@ export default function SegmentsSection() {
       idealFor: "Sprzedaży produktów/usług 5k+ wymagających konsultacji i wycen",
       color: "from-[#C11369] to-[#049FE3]",
       accentColor: "#C11369",
-      minBudget: "3000 PLN",
+      minBudget: "4000 PLN",
       budgetLabel: "Minimalny budżet reklamowy",
       features: [
         { 
@@ -53,7 +53,7 @@ export default function SegmentsSection() {
       ],
       targetAudience: "Dla Ciebie, jeśli prowadzisz konsultacje/doradztwo przed sprzedażą",
       ctaText: "Dowiedz się więcej o SmartLeads",
-      href: "#smartleads"
+      href: "/dla-firm-uslugowych"
     },
     {
       icon: <ShoppingCart className="w-8 h-8" />,
@@ -61,7 +61,7 @@ export default function SegmentsSection() {
       subtitle: "Sklepy internetowe",
       idealFor: "Producentów lub dystrybutorów z dobrymi cenami zakupowymi ",
       color: "from-[#049FE3] to-[#C11369]",
-      accentColor: "#049FE3",minBudget: "5000 PLN",
+      accentColor: "#049FE3",minBudget: "4000 PLN",
       budgetLabel: "Minimalny budżet reklamowy",
       features: [
         { 
@@ -83,7 +83,7 @@ export default function SegmentsSection() {
       ],
       targetAudience: "Dla Ciebie, jeśli myślisz o biznesie długoterminowo, nie tylko o ruchu na stronie",
       ctaText: "Dowiedz się więcej o SmartCommerce",
-      href: "#smartcommerce"
+      href: "/dla-ecommerce"
     }
   ]
 
@@ -151,7 +151,7 @@ export default function SegmentsSection() {
                     {/* Features */}
                     <div className="space-y-3 mb-8">
                       {segment.features.map((feature, fIndex) => (
-                        <div key={fIndex} className="flex items-start gap-3 group/item">
+                        <div key={fIndex} className="flex items-center gap-3 group/item">
                           <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-green-400 to-green-500 rounded-full flex items-center justify-center text-white shadow-md group-hover/item:scale-110 transition-transform">
                             <CheckCircle2 className="w-4 h-4" />
                           </div>

@@ -141,7 +141,7 @@ export default function ProblemsSection() {
               {/* CTA */}
               <div className="flex justify-center mt-8">
                 <a
-                  href="#rozwiazanie"
+                  href="/o-nas"
                   className="group inline-flex items-center gap-2 text-[#C11369] font-heading font-semibold hover:gap-4 transition-all duration-300"
                 >
                   <span>Zobacz jak rozwiązujemy te problemy</span>

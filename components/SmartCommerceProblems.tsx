@@ -54,7 +54,7 @@ export default function SmartCommerceProblems() {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Heading */}
-        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${
+        <div className={`max-w-6xl mx-auto text-center mb-16 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] mb-6">

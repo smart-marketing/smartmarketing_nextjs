@@ -65,7 +65,7 @@ export default function ResourcesSection() {
         "Q&A i odpowiedzi na pytania"
       ],
       ctaText: "Subskrybuj kanał",
-      href: "https://youtube.com/@smartmarketing",
+      href: "https://www.youtube.com/@milosz_wein",
       color: "from-red-500 to-red-600",
       bgColor: "from-red-500/5 to-red-600/5",
       external: true

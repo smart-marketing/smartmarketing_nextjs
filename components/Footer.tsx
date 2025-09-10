@@ -30,28 +30,28 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com/agencjasmartmarketing"
                 className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-[#C11369] hover:text-white transition-all duration-300"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/milosz.wein/"
                 className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-[#C11369] hover:text-white transition-all duration-300"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/in/mi%C5%82osz-wein-2a643422a/"
                 className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-[#049FE3] hover:text-white transition-all duration-300"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@milosz_wein"
                 className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-[#049FE3] hover:text-white transition-all duration-300"
                 aria-label="LinkedIn"
               >

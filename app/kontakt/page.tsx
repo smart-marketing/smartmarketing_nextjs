@@ -137,7 +137,7 @@ export default function ContactPage() {
                           Miłosz Wein
                         </h3>
                         <p className="font-body text-sm text-gray-600 mb-2">
-                          Founder & Strateg
+                          Owner & Digital Marketing Specialist
                         </p>
                         <a
                           href="https://pl.linkedin.com/in/mi%C5%82osz-wein-2a643422a"
@@ -164,7 +164,7 @@ export default function ContactPage() {
                           Sandra Korgul
                         </h3>
                         <p className="font-body text-sm text-gray-600 mb-2">
-                          Copywriter & Conversion Expert
+                          Copywriter
                         </p>
                         <a
                           href="https://pl.linkedin.com/in/sandra-korgul-408120249"
