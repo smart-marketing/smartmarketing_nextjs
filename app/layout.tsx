@@ -15,9 +15,22 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: "Smart Marketing - Agencja Marketingowa",
+  title: "Smart Marketing - Agencja Marketingowa dla MŚP",
   description: "Zwiększamy sprzedaż Twojej firmy",
+  icons: {
+    icon: [
+      { url: '/sygnet.png', type: 'image/png' },
+    ],
+    shortcut: [
+      { url: '/sygnet.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/sygnet.png', type: 'image/png' },
+    ],
+  },
 }
+
+
 
 export default function RootLayout({
   children,
