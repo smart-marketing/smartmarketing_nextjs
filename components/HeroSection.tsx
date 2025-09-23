@@ -284,7 +284,7 @@ export default function HeroSection() {
       {/* Scroll indicator */}
       <button
         onClick={scrollToNext}
-        className="absolute bottom-8 sm:bottom-12 lg:bottom-14 left-1/2 -translate-x-1/2 text-gray-400 hover:text-[#C11369] transition-colors animate-bounce"
+        className="absolute bottom-12 sm:bottom-12 lg:bottom-14 left-1/2 -translate-x-1/2 text-gray-400 hover:text-[#C11369] transition-colors animate-bounce"
         aria-label="Przewiń w dół"
       >
         <ChevronDown size={32} />
