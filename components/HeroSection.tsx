@@ -2,38 +2,6 @@
 import { useEffect, useState } from 'react'
 import { ArrowRight, TrendingUp, Target, Clock, ChevronDown } from 'lucide-react'
 
-const styles = `
-  @keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(10deg); }
-  }
-  
-  @keyframes float-delayed {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-15px) rotate(-10deg); }
-  }
-  
-  @keyframes draw {
-    from { stroke-dashoffset: 300; }
-    to { stroke-dashoffset: 0; }
-  }
-  
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  .animate-float-delayed {
-    animation: float-delayed 6s ease-in-out infinite;
-    animation-delay: 3s;
-  }
-  
-  .animate-draw {
-    stroke-dasharray: 300;
-    animation: draw 2s ease-out forwards;
-    animation-delay: 0.5s;
-  }
-`
-
 export default function HeroSection() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isVisible, setIsVisible] = useState(false)
@@ -71,6 +39,15 @@ export default function HeroSection() {
         animation: draw 2s ease-out forwards;
         animation-delay: 0.5s;
       }
+      
+      /* Hide scrollbar for mobile carousel */
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
     `
     document.head.appendChild(styleSheet)
     return () => {
@@ -96,7 +73,7 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="h-screen max-h-[900px] relative overflow-hidden flex items-center pt-20 sm:pt-24 lg:pt-36">
+    <section className="min-h-screen relative overflow-hidden flex items-center py-20 sm:py-24 lg:py-32">
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50/50 to-white">
         <div className="absolute inset-0">
@@ -118,11 +95,11 @@ export default function HeroSection() {
         <div className="absolute top-1/2 right-1/3 w-16 h-16 bg-gradient-to-br from-[#C11369]/10 to-[#049FE3]/10 rounded-full animate-float" />
       </div>
 
-      <div className="container mx-auto px-0 relative z-10">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Main heading with animation */}
           <h1 
-            className={`font-heading text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-center mb-8 leading-tight transition-all duration-1000 ${
+            className={`font-heading text-[1.75rem] sm:text-3xl md:text-4xl lg:text-5xl mt-10 font-bold text-center mb-6 sm:mb-8 leading-tight transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
@@ -154,44 +131,83 @@ export default function HeroSection() {
             </span>
           </h1>
 
-          {/* Transformation showcase */}
+          {/* Transformation showcase - mobile carousel / desktop grid */}
           <div 
-            className={`grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto mb-10 transition-all duration-1000 delay-300 ${
+            className={`mb-8 sm:mb-10 transition-all duration-1000 delay-300 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            {/* FROM */}
-            <div className="relative group flex-1">
-            <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-xl blur-xl group-hover:blur-2xl transition-all" />
-            <div className="relative bg-white/80 backdrop-blur-sm border border-red-200 rounded-xl p-4 hover:scale-[1.02] transition-transform">
-                <div className="flex items-center gap-2 mb-2">
-                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
-                    <span className="text-red-600 font-bold text-sm">✕</span>
+            {/* Mobile carousel wrapper */}
+            <div className="md:hidden -mx-4 px-4 overflow-x-auto scrollbar-hide">
+              <div className="flex gap-4 w-max">
+                {/* FROM card */}
+                <div className="relative group flex-shrink-0 w-[280px]">
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-xl blur-xl" />
+                  <div className="relative bg-white/80 backdrop-blur-sm border border-red-200 rounded-xl p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                        <span className="text-red-600 font-bold text-sm">✕</span>
+                      </div>
+                      <span className="font-heading font-semibold text-gray-600 uppercase text-xs tracking-wider">OD</span>
+                    </div>
+                    <p className="font-body text-sm text-gray-700">
+                      <span className="font-semibold text-red-600">przepalania budżetu</span> i frustrujących domysłów
+                    </p>
+                  </div>
                 </div>
-                <span className="font-heading font-semibold text-gray-600 uppercase text-xs tracking-wider">OD</span>
+
+                {/* TO card */}
+                <div className="relative group flex-shrink-0 w-[280px]">
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#049FE3]/20 to-[#C11369]/20 rounded-xl blur-xl" />
+                  <div className="relative bg-white/80 backdrop-blur-sm border border-[#049FE3]/30 rounded-xl p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="w-8 h-8 bg-gradient-to-br from-[#049FE3] to-[#C11369] rounded-full flex items-center justify-center">
+                        <span className="text-white font-bold text-sm">✓</span>
+                      </div>
+                      <span className="font-heading font-semibold text-gray-600 uppercase text-xs tracking-wider">DO</span>
+                    </div>
+                    <p className="font-body text-sm text-gray-700">
+                      <span className="font-semibold bg-gradient-to-r from-[#049FE3] to-[#C11369] bg-clip-text text-transparent">precyzyjnego systemu</span>, który przynosi mierzalne rezultaty
+                    </p>
+                  </div>
                 </div>
-                <p className="font-body text-sm md:text-base text-gray-700">
-                <span className="font-semibold text-red-600">przepalania budżetu</span> i frustrujących domysłów
-                </p>
-            </div>
+              </div>
             </div>
 
-            {/* TO */}
-            <div className="relative group flex-1">
-            <div className="absolute inset-0 bg-gradient-to-r from-[#049FE3]/20 to-[#C11369]/20 rounded-xl blur-xl group-hover:blur-2xl transition-all" />
-            <div className="relative bg-white/80 backdrop-blur-sm border border-[#049FE3]/30 rounded-xl p-4 hover:scale-[1.02] transition-transform">
-                <div className="flex items-center gap-2 mb-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-[#049FE3] to-[#C11369] rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">✓</span>
+            {/* Desktop grid */}
+            <div className="hidden md:grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              {/* FROM */}
+              <div className="relative group flex-1">
+                <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-xl blur-xl group-hover:blur-2xl transition-all" />
+                <div className="relative bg-white/80 backdrop-blur-sm border border-red-200 rounded-xl p-4 hover:scale-[1.02] transition-transform">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                      <span className="text-red-600 font-bold text-sm">✕</span>
+                    </div>
+                    <span className="font-heading font-semibold text-gray-600 uppercase text-xs tracking-wider">OD</span>
+                  </div>
+                  <p className="font-body text-base text-gray-700">
+                    <span className="font-semibold text-red-600">przepalania budżetu</span> i frustrujących domysłów
+                  </p>
                 </div>
-                <span className="font-heading font-semibold text-gray-600 uppercase text-xs tracking-wider">DO</span>
-                </div>
-                <p className="font-body text-sm md:text-base text-gray-700">
-                <span className="font-semibold bg-gradient-to-r from-[#049FE3] to-[#C11369] bg-clip-text text-transparent">precyzyjnego systemu</span>, który przynosi mierzalne rezultaty
-                </p>
-            </div>
-            </div>
+              </div>
 
+              {/* TO */}
+              <div className="relative group flex-1">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#049FE3]/20 to-[#C11369]/20 rounded-xl blur-xl group-hover:blur-2xl transition-all" />
+                <div className="relative bg-white/80 backdrop-blur-sm border border-[#049FE3]/30 rounded-xl p-4 hover:scale-[1.02] transition-transform">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-8 h-8 bg-gradient-to-br from-[#049FE3] to-[#C11369] rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-sm">✓</span>
+                    </div>
+                    <span className="font-heading font-semibold text-gray-600 uppercase text-xs tracking-wider">DO</span>
+                  </div>
+                  <p className="font-body text-base text-gray-700">
+                    <span className="font-semibold bg-gradient-to-r from-[#049FE3] to-[#C11369] bg-clip-text text-transparent">precyzyjnego systemu</span>, który przynosi mierzalne rezultaty
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
 
             {/* Time promise badge */}
@@ -268,7 +284,7 @@ export default function HeroSection() {
       {/* Scroll indicator */}
       <button
         onClick={scrollToNext}
-        className="absolute bottom-14 left-1/2 -translate-x-1/2 text-gray-400 hover:text-[#C11369] transition-colors animate-bounce"
+        className="absolute bottom-4 sm:bottom-8 lg:bottom-14 left-1/2 -translate-x-1/2 text-gray-400 hover:text-[#C11369] transition-colors animate-bounce"
         aria-label="Przewiń w dół"
       >
         <ChevronDown size={32} />
