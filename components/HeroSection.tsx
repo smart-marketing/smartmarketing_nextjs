@@ -99,7 +99,7 @@ export default function HeroSection() {
         <div className="max-w-5xl mx-auto">
           {/* Main heading with animation */}
           <h1 
-            className={`font-heading text-[1.75rem] sm:text-3xl md:text-4xl lg:text-5xl mt-10 font-bold text-center mb-6 sm:mb-8 leading-tight transition-all duration-1000 ${
+            className={`font-heading text-[1.75rem] sm:text-2xl md:text-3xl lg:text-5xl mt-10 font-bold text-center mb-6 sm:mb-8 leading-tight transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
@@ -138,7 +138,7 @@ export default function HeroSection() {
             }`}
           >
             {/* Mobile carousel wrapper */}
-            <div className="md:hidden -mx-4 px-4 overflow-x-auto scrollbar-hide">
+            <div className="md:hidden -mx-2 px-2 overflow-x-auto scrollbar-hide">
               <div className="flex gap-4 w-max">
                 {/* FROM card */}
                 <div className="relative group flex-shrink-0 w-[280px]">
@@ -216,7 +216,7 @@ export default function HeroSection() {
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
             >
-            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-[#C11369]/10 to-[#049FE3]/10 backdrop-blur-sm border border-[#C11369]/20 rounded-full px-6 py-3">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#C11369]/10 to-[#049FE3]/10 backdrop-blur-sm border border-[#C11369]/20 rounded-full px-6 py-3">
                 <Clock className="w-5 h-5 text-[#C11369]" />
                 <span className="font-heading font-semibold text-[#333333]">
                 Rezultaty już w <span className="text-[#C11369]">2-8 tygodni</span>
@@ -231,7 +231,7 @@ export default function HeroSection() {
 
           {/* CTA Buttons */}
           <div 
-            className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-1000 delay-700 ${
+            className={`flex flex-col sm:flex-row gap-2 justify-center items-center transition-all duration-1000 delay-700 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
@@ -255,11 +255,11 @@ export default function HeroSection() {
 
           {/* Trust indicators */}
           <div 
-            className={`flex flex-wrap justify-center items-center gap-6 md:gap-12 mt-10 transition-all duration-1000 delay-900 ${
+            className={`flex flex-wrap justify-center items-center  gap-6 md:gap-12 mt-4 transition-all duration-1000 delay-900 ${
               isVisible ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 hidden sm:flex">
               <div className="flex -space-x-2">
                 <img src="/investsolar.png" alt="InvestSolar" className="w-8 h-8 rounded-full border-2 border-white object-contain bg-white" />
                 <img src="/aiwa.png" alt="Aiwa" className="w-8 h-8 rounded-full border-2 border-white object-contain bg-white" />
