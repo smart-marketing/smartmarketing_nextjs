@@ -212,7 +212,7 @@ export default function HeroSection() {
 
             {/* Time promise badge */}
             <div 
-            className={`flex justify-center mb-6 transition-all duration-1000 delay-500 ${
+            className={`flex justify-center mb-6 transition-all duration-1000 delay-500 hidden sm:flex ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
             >
