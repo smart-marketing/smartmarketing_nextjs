@@ -73,7 +73,7 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="min-h-screen relative overflow-hidden flex items-center py-20 sm:py-24 lg:py-32">
+    <section className="min-h-screen relative overflow-hidden flex items-center py-20 sm:py-20 lg:py-32">
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50/50 to-white">
         <div className="absolute inset-0">
@@ -95,11 +95,11 @@ export default function HeroSection() {
         <div className="absolute top-1/2 right-1/3 w-16 h-16 bg-gradient-to-br from-[#C11369]/10 to-[#049FE3]/10 rounded-full animate-float" />
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-2 relative z-10">
         <div className="max-w-5xl mx-auto">
           {/* Main heading with animation */}
           <h1 
-            className={`font-heading text-[1.75rem] sm:text-2xl md:text-3xl lg:text-5xl mt-10 font-bold text-center mb-6 sm:mb-8 leading-tight transition-all duration-1000 ${
+            className={`font-heading text-[1.5rem] sm:text-2xl md:text-3xl lg:text-5xl mt-12 font-bold text-center mb-6 sm:mb-8 leading-tight transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
@@ -133,12 +133,12 @@ export default function HeroSection() {
 
           {/* Transformation showcase - mobile carousel / desktop grid */}
           <div 
-            className={`mb-8 sm:mb-10 transition-all duration-1000 delay-300 ${
+            className={`mb-4 sm:mb-10 transition-all duration-1000 delay-300 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
             {/* Mobile carousel wrapper */}
-            <div className="md:hidden -mx-2 px-2 overflow-x-auto scrollbar-hide">
+            <div className="md:hidden -mx-z px-2 overflow-x-auto scrollbar-hide">
               <div className="flex gap-4 w-max">
                 {/* FROM card */}
                 <div className="relative group flex-shrink-0 w-[280px]">
@@ -237,7 +237,7 @@ export default function HeroSection() {
           >
             <a
               href="#kontakt"
-              className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white px-8 py-4 rounded-full font-heading font-semibold hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white px-8 py-4 rounded-full font-heading font-semibold hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <span>Rozpocznij transformację</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -246,7 +246,7 @@ export default function HeroSection() {
             
             <a
               href="/case-studies"
-              className="group inline-flex items-center gap-3 bg-white border-2 border-[#333333] text-[#333333] px-8 py-4 rounded-full font-heading font-semibold hover:bg-[#333333] hover:text-white transition-all duration-300"
+              className="group inline-flex items-center gap-2 bg-white border-2 border-[#333333] text-[#333333] px-8 py-4 rounded-full font-heading font-semibold hover:bg-[#333333] hover:text-white transition-all duration-300"
             >
               <Target className="w-5 h-5" />
               <span>Zobacz rezultaty</span>
@@ -269,7 +269,7 @@ export default function HeroSection() {
               </div>
               <span className="font-body text-sm text-gray-600">50+ zadowolonych klientów</span>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-1`">
               <span className="font-heading font-bold text-[#C11369]">4.9</span>
               <div className="flex gap-1">
                 {[1,2,3,4,5].map((i) => (
@@ -284,7 +284,7 @@ export default function HeroSection() {
       {/* Scroll indicator */}
       <button
         onClick={scrollToNext}
-        className="absolute bottom-4 sm:bottom-8 lg:bottom-14 left-1/2 -translate-x-1/2 text-gray-400 hover:text-[#C11369] transition-colors animate-bounce"
+        className="absolute bottom-4 sm:bottom-2 lg:bottom-14 left-1/2 -translate-x-1/2 text-gray-400 hover:text-[#C11369] transition-colors animate-bounce"
         aria-label="Przewiń w dół"
       >
         <ChevronDown size={32} />
