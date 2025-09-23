@@ -99,7 +99,7 @@ export default function HeroSection() {
         <div className="max-w-5xl mx-auto">
           {/* Main heading with animation */}
           <h1 
-            className={`font-heading text-[1.5rem] sm:text-2xl md:text-3xl lg:text-5xl mt-12 font-bold text-center mb-6 sm:mb-8 leading-tight transition-all duration-1000 ${
+            className={`font-heading text-[1.65rem] sm:text-2xl md:text-3xl lg:text-5xl mt-10 font-bold text-center mb-4 sm:mb-8 leading-tight transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
@@ -246,7 +246,7 @@ export default function HeroSection() {
             
             <a
               href="/case-studies"
-              className="group inline-flex items-center gap-2 bg-white border-2 border-[#333333] text-[#333333] px-8 py-4 rounded-full font-heading font-semibold hover:bg-[#333333] hover:text-white transition-all duration-300"
+              className="group inline-flex items-center gap-2 bg-white border-2 border-[#333333] text-[#333333] px-8 py-3 rounded-full font-heading font-semibold hover:bg-[#333333] hover:text-white transition-all duration-300"
             >
               <Target className="w-5 h-5" />
               <span>Zobacz rezultaty</span>
