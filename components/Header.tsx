@@ -125,7 +125,7 @@ export default function Header() {
               className="lg:hidden relative z-50 p-2 text-[#333333]"
               aria-label="Menu"
             >
-              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </nav>
         </div>

@@ -96,7 +96,7 @@ export default function HeroSection() {
   }
 
   return (
-    <section className="min-h-screen relative overflow-hidden flex items-center pt-24 lg:pt-36">
+    <section className="h-screen max-h-[900px] relative overflow-hidden flex items-center pt-20 sm:pt-24 lg:pt-36">
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50/50 to-white">
         <div className="absolute inset-0">
