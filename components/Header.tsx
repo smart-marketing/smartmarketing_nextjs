@@ -178,14 +178,14 @@ export default function Header() {
         {/* Menu Content */}
         <div className="flex flex-col h-full">
           {/* Navigation Items - bez logo, od razu menu */}
-          <nav className="flex-1 px-5 pt-16 pb-4">
-            <ul className="space-y-0">
+          <nav className="flex-1 px-5 pt-20 pb-4">
+            <ul className="space-y-0.5">
               {navItems.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block py-2.5 px-3 text-base font-heading font-medium text-[#333333] hover:text-[#C11369] hover:bg-gradient-to-r hover:from-[#C11369]/5 hover:to-[#049FE3]/5 rounded-lg transition-all duration-200"
+                    className="block py-2.5 px-3 text-[17px] font-heading font-medium text-[#333333] hover:text-[#C11369] hover:bg-gradient-to-r hover:from-[#C11369]/5 hover:to-[#049FE3]/5 rounded-lg transition-all duration-200"
                   >
                     {item.name}
                   </Link>
