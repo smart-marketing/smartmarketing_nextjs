@@ -178,7 +178,7 @@ export default function Header() {
         {/* Menu Content */}
         <div className="flex flex-col h-full">
           {/* Navigation Items - bez logo, od razu menu */}
-          <nav className="flex-1 px-5 pt-20 pb-4">
+          <nav className="flex-1 px-5 pt-32 pb-4">
             <ul className="space-y-0.5">
               {navItems.map((item) => (
                 <li key={item.name}>
