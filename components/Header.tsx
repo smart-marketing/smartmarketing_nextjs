@@ -165,39 +165,27 @@ export default function Header() {
         }`}
       >
         {/* Close Button */}
-        <div className="absolute top-6 right-6">
+        <div className="absolute top-4 right-4 z-50">
           <button
             onClick={() => setIsMobileMenuOpen(false)}
             className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
             aria-label="Zamknij menu"
           >
-            <X size={28} className="text-[#333333]" />
+            <X size={24} className="text-[#333333]" />
           </button>
         </div>
 
         {/* Menu Content */}
         <div className="flex flex-col h-full">
-          {/* Logo */}
-          <div className="p-6 pb-2">
-            <Image
-              src="/logo.webp"
-              alt="Smart Marketing"
-              width={150}
-              height={50}
-              className="h-10 w-auto"
-              priority
-            />
-          </div>
-
-          {/* Navigation Items */}
-          <nav className="flex-1 overflow-y-auto px-6 py-4">
-            <ul className="space-y-1">
+          {/* Navigation Items - bez logo, od razu menu */}
+          <nav className="flex-1 px-5 pt-16 pb-4">
+            <ul className="space-y-0">
               {navItems.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block py-3 px-4 text-lg font-heading font-medium text-[#333333] hover:text-[#C11369] hover:bg-gradient-to-r hover:from-[#C11369]/5 hover:to-[#049FE3]/5 rounded-lg transition-all duration-200"
+                    className="block py-2.5 px-3 text-base font-heading font-medium text-[#333333] hover:text-[#C11369] hover:bg-gradient-to-r hover:from-[#C11369]/5 hover:to-[#049FE3]/5 rounded-lg transition-all duration-200"
                   >
                     {item.name}
                   </Link>
@@ -206,35 +194,35 @@ export default function Header() {
             </ul>
           </nav>
 
-          {/* Contact Section */}
-          <div className="border-t border-gray-100 p-6 space-y-4">
+          {/* Contact Section - przypięte na dole */}
+          <div className="mt-auto border-t border-gray-100 p-5 space-y-3">
             {/* Contact Info */}
-            <div className="space-y-3">
+            <div className="space-y-2">
               <a
                 href="tel:794312947"
                 className="flex items-center gap-3 text-[#333333] hover:text-[#049FE3] transition-colors group"
               >
-                <div className="p-2 bg-[#049FE3]/10 rounded-lg group-hover:bg-[#049FE3]/20 transition-colors">
-                  <Phone size={18} className="text-[#049FE3]" />
+                <div className="p-1.5 bg-[#049FE3]/10 rounded-lg group-hover:bg-[#049FE3]/20 transition-colors">
+                  <Phone size={16} className="text-[#049FE3]" />
                 </div>
-                <span className="font-body text-base">794 312 947</span>
+                <span className="font-body text-sm">794 312 947</span>
               </a>
               
               <a
                 href="mailto:info@agencjasmart.marketing"
                 className="flex items-center gap-3 text-[#333333] hover:text-[#C11369] transition-colors group"
               >
-                <div className="p-2 bg-[#C11369]/10 rounded-lg group-hover:bg-[#C11369]/20 transition-colors">
-                  <Mail size={18} className="text-[#C11369]" />
+                <div className="p-1.5 bg-[#C11369]/10 rounded-lg group-hover:bg-[#C11369]/20 transition-colors">
+                  <Mail size={16} className="text-[#C11369]" />
                 </div>
-                <span className="font-body text-base break-all">info@agencjasmart.marketing</span>
+                <span className="font-body text-sm break-all">info@agencjasmart.marketing</span>
               </a>
             </div>
             
             {/* CTA Button */}
             <a
               href="tel:794312947"
-              className="block w-full text-center bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white px-6 py-4 rounded-full font-heading font-semibold hover:shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+              className="block w-full text-center bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white px-5 py-3 rounded-full font-heading font-semibold text-sm hover:shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Umów konsultację
