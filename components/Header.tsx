@@ -132,11 +132,12 @@ export default function Header() {
       </header>
 
       {/* Mobile Menu */}
-      <div
-        className={`fixed inset-0 bg-white z-40 lg:hidden transition-transform duration-300 ${
-          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
-      >
+        <div
+          className={`fixed top-0 right-0 bottom-0 w-full bg-white z-40 lg:hidden transition-transform duration-300 ${
+            isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
+          style={{ maxWidth: '100vw' }}
+        >
         <div className="flex flex-col justify-center items-center h-full px-8">
           <ul className="flex flex-col gap-8 text-center mb-12">
             {navItems.map((item) => (
