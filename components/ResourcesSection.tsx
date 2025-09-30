@@ -35,7 +35,7 @@ export default function ResourcesSection() {
         "Nowe trendy w Google Ads, Meta, TikTok"
       ],
       ctaText: "Zapisz się za darmo",
-      href: "#newsletter",
+      href: "/newsletter",
       color: "from-[#C11369] to-[#049FE3]",
       bgColor: "from-[#C11369]/5 to-[#049FE3]/5"
     },
