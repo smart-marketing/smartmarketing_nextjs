@@ -57,25 +57,24 @@ export default function SmartCommerceProblems() {
         <div className={`max-w-6xl mx-auto text-center mb-16 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] mb-6">
-            Najczęściej spotykane <span className="text-red-600">problemy e-commerce</span>,
+          <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-[#333333] mb-6">
+            Najczęściej spotykane <span className="text-red-600">problemy e-commerce</span>, 
             <br className="hidden md:block" />
-            z którymi się spotykamy
+             z którymi się spotykamy
           </h2>
         </div>
 
-        {/* Problems Grid */}
+        {/* Problems Carousel */}
         <div className="max-w-6xl mx-auto mb-16">
-          <div className="grid md:grid-cols-2 gap-6">
-            {problems.map((problem, index) => (
+            <div className="flex md:grid md:grid-cols-2 gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scrollbar-hide pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 pt-4">            {problems.map((problem, index) => (
               <div
                 key={index}
-                className={`transition-all duration-700 ${
+                className={`flex-shrink-0 w-[75vw] md:w-auto snap-center transition-all duration-700 ${
                   isVisible ? 'opacity-100 translate-x-0' : index % 2 === 0 ? 'opacity-0 -translate-x-10' : 'opacity-0 translate-x-10'
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
-                <div className="group relative bg-white rounded-2xl p-6 border border-gray-200 hover:border-red-300 hover:shadow-xl transition-all duration-300">
+                <div className="group relative bg-white rounded-2xl p-6 border border-gray-200 hover:border-red-300 hover:shadow-xl transition-all duration-300 h-full">
                   {/* Problem indicator */}
                   <div className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform">
                     <span className="text-xl font-bold">✕</span>

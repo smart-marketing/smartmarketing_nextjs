@@ -46,7 +46,7 @@ export default function CaseStudiesSection() {
     },
     {
       id: 2,
-      title: "Niemiecki E-commerce",
+      title: "E-commerce w DE",
       mainResult: "100k zł sprzedaży",
       timeFrame: "w 4 miesiące",
       description: [

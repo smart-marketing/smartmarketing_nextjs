@@ -158,28 +158,30 @@ export default function SmartCommerceProcess() {
           </div>
         </div>
 
-        {/* Step Details */}
-        <div className="max-w-5xl mx-auto">
-          {/* Mobile: All steps visible */}
-          <div className="lg:hidden space-y-8">
-            {steps.map((step, index) => (
-              <div
-                key={index}
-                className={`transition-all duration-700 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
-                style={{ transitionDelay: `${index * 150}ms` }}
-              >
-                <StepCard step={step} />
-              </div>
-            ))}
-          </div>
-
-          {/* Desktop: Active step only */}
-          <div className="hidden lg:block">
-            <StepCard step={steps[activeStep]} />
-          </div>
+{/* Step Details */}
+<div className="max-w-5xl mx-auto">
+  {/* Mobile: Carousel */}
+  <div className="lg:hidden">
+    <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide pb-4 -mx-4 px-4">
+      {steps.map((step, index) => (
+        <div
+          key={index}
+          className={`flex-shrink-0 w-[90vw] snap-center transition-all duration-700 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+          style={{ transitionDelay: `${index * 150}ms` }}
+        >
+          <StepCard step={step} />
         </div>
+      ))}
+    </div>
+  </div>
+
+  {/* Desktop: Active step only */}
+  <div className="hidden lg:block">
+    <StepCard step={steps[activeStep]} />
+  </div>
+</div>
       </div>
     </section>
   )

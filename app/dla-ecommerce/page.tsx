@@ -35,7 +35,7 @@ export default function SmartCommercePage() {
       <Header />
       <main className="min-h-screen bg-white">
         {/* Hero Section - identyczny design jak SmartLeads */}
-        <section className="h-screen relative overflow-hidden flex items-center pt-24 lg:pt-20">
+       <section className="min-h-screen relative overflow-hidden flex items-center py-24 lg:py-20">
           {/* Animated gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50/50 to-white">
             <div className="absolute inset-0">
@@ -58,10 +58,10 @@ export default function SmartCommercePage() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-5xl mx-auto pt-10">
               {/* Main heading */}
               <h1 
-                className={`font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl font-bold text-center mb-6 leading-tight transition-all duration-1000 ${
+                className={`font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-bold text-center mb-6 leading-tight transition-all duration-1000 ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
               >
@@ -76,46 +76,48 @@ export default function SmartCommercePage() {
 
               {/* Transformation showcase */}
               <div 
-                className={`flex flex-col md:flex-row gap-4 md:gap-6 max-w-6xl mx-auto mb-6 transition-all duration-1000 delay-300 ${
+                className={`max-w-6xl mx-auto mb-6 transition-all duration-1000 delay-300 ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
               >
-                {/* FROM */}
-                <div className="relative group flex-1">
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-xl blur-xl group-hover:blur-2xl transition-all" />
-                  <div className="relative bg-white/80 backdrop-blur-sm border border-red-200 rounded-xl p-4 hover:scale-[1.02] transition-transform">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
-                        <span className="text-red-600 font-bold text-sm">✕</span>
+                <div className="flex md:grid md:grid-cols-2 gap-4 md:gap-6 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scrollbar-hide pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0">
+                  {/* FROM */}
+                  <div className="flex-shrink-0 w-[65vw] md:w-auto snap-center relative group">
+                    <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-xl blur-xl group-hover:blur-2xl transition-all" />
+                    <div className="relative bg-white/80 backdrop-blur-sm border border-red-200 rounded-xl p-4 md:p-6 hover:scale-[1.02] transition-transform h-full">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
+                          <span className="text-red-600 font-bold text-sm">✕</span>
+                        </div>
+                        <span className="font-heading font-semibold text-gray-600 uppercase text-xs tracking-wider">OD</span>
                       </div>
-                      <span className="font-heading font-semibold text-gray-600 uppercase text-xs tracking-wider">OD</span>
+                      <p className="font-body text-sm md:text-base text-gray-700">
+                        <span className="font-semibold text-red-600">przepalania budżetu</span> na reklamy które nie sprzedają
+                      </p>
                     </div>
-                    <p className="font-body text-sm md:text-base text-gray-700">
-                      <span className="font-semibold text-red-600">przepalania budżetu</span> na reklamy które nie sprzedają
-                    </p>
                   </div>
-                </div>
 
-                {/* TO */}
-                <div className="relative group flex-1">
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#049FE3]/20 to-[#C11369]/20 rounded-xl blur-xl group-hover:blur-2xl transition-all" />
-                  <div className="relative bg-white/80 backdrop-blur-sm border border-[#049FE3]/30 rounded-xl p-4 hover:scale-[1.02] transition-transform">
-                    <div className="flex items-center gap-2 mb-2">
-                      <div className="w-8 h-8 bg-gradient-to-br from-[#049FE3] to-[#C11369] rounded-full flex items-center justify-center">
-                        <span className="text-white font-bold text-sm">✓</span>
+                  {/* TO */}
+                  <div className="flex-shrink-0 w-[85vw] md:w-auto snap-center relative group">
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#049FE3]/20 to-[#C11369]/20 rounded-xl blur-xl group-hover:blur-2xl transition-all" />
+                    <div className="relative bg-white/80 backdrop-blur-sm border border-[#049FE3]/30 rounded-xl p-4 md:p-6 hover:scale-[1.02] transition-transform h-full">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-8 h-8 bg-gradient-to-br from-[#049FE3] to-[#C11369] rounded-full flex items-center justify-center">
+                          <span className="text-white font-bold text-sm">✓</span>
+                        </div>
+                        <span className="font-heading font-semibold text-gray-600 uppercase text-xs tracking-wider">DO</span>
                       </div>
-                      <span className="font-heading font-semibold text-gray-600 uppercase text-xs tracking-wider">DO</span>
+                      <p className="font-body text-sm md:text-base text-gray-700">
+                        <span className="font-semibold bg-gradient-to-r from-[#049FE3] to-[#C11369] bg-clip-text text-transparent">systematycznego zwiększania</span> obrotów i rentowności sklepu
+                      </p>
                     </div>
-                    <p className="font-body text-sm md:text-base text-gray-700">
-                      <span className="font-semibold bg-gradient-to-r from-[#049FE3] to-[#C11369] bg-clip-text text-transparent">systematycznego zwiększania</span> obrotów i rentowności sklepu
-                    </p>
                   </div>
                 </div>
               </div>
 
               {/* CTA Button */}
               <div 
-                className={`flex justify-center mt-10 transition-all duration-1000 delay-700 ${
+                className={`flex justify-center mt-2 transition-all duration-1000 delay-700 ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
               >
@@ -131,11 +133,11 @@ export default function SmartCommercePage() {
 
               {/* Trust indicators */}
               <div 
-                className={`flex flex-wrap justify-center items-center gap-6 md:gap-12 mt-10 transition-all duration-1000 delay-900 ${
+                className={`flex flex-wrap justify-center items-center gap-3 md:gap-12 mt-4 transition-all duration-1000 delay-900 ${
                   isVisible ? 'opacity-100' : 'opacity-0'
                 }`}
               >
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-1">
                   <div className="flex -space-x-2">
                     <img src="/aiwa.png" alt="Aiwa" className="w-8 h-8 rounded-full border-2 border-white object-contain bg-white" />
                     <img src="/manta.webp" alt="Manta" className="w-8 h-8 rounded-full border-2 border-white object-contain bg-white" />

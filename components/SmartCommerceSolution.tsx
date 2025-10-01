@@ -112,18 +112,18 @@ export default function SmartCommerceSolution() {
           </div>
         </div>
 
-        {/* Solutions Grid */}
+        {/* Solutions Carousel */}
         <div className="max-w-7xl mx-auto mb-16">
-          <div className="space-y-8">
+          <div className="flex md:block gap-6 md:space-y-8 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scrollbar-hide pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 pt-2">
             {solutions.map((solution, index) => (
               <div
                 key={index}
-                className={`transition-all duration-700 ${
+                className={`flex-shrink-0 w-[80vw] md:w-auto snap-center transition-all duration-700 ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
-                <div className={`group relative bg-white rounded-3xl border ${solution.highlight ? 'border-[#049FE3]/30 shadow-xl' : 'border-gray-200'} hover:shadow-2xl transition-all duration-300 overflow-hidden`}>
+                <div className={`group relative bg-white rounded-3xl border ${solution.highlight ? 'border-[#049FE3]/30 shadow-xl' : 'border-gray-200'} hover:shadow-2xl transition-all duration-300 overflow-hidden h-full`}>
                   {/* Gradient bar */}
                   <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${solution.gradient}`} />
                   

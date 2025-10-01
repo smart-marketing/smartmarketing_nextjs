@@ -97,7 +97,7 @@ export default function CaseStudiesPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-white pt-32">
+      <main className="min-h-screen bg-white pt-16">
         {/* Hero Section */}
         <section className="py-20 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#C11369]/10 to-transparent rounded-full blur-3xl" />
@@ -108,37 +108,17 @@ export default function CaseStudiesPage() {
               <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-[#333333] mb-6">
                 Case Studies
               </h1>
-              <p className="font-body text-xl text-gray-600 mb-8">
+              <p className="font-body text-xl text-gray-600 mb-2">
                 Realne wyniki naszych klientów - zobacz, co możemy osiągnąć razem
               </p>
               
-              {/* Stats */}
-              <div className="flex flex-wrap justify-center gap-8 md:gap-16">
-                <div className="text-center">
-                  <div className="font-heading text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#C11369] to-[#049FE3] bg-clip-text text-transparent">
-                    80+
-                  </div>
-                  <p className="font-body text-gray-600 mt-1">Zadowolonych klientów</p>
-                </div>
-                <div className="text-center">
-                  <div className="font-heading text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#049FE3] to-[#C11369] bg-clip-text text-transparent">
-                    5000+
-                  </div>
-                  <p className="font-body text-gray-600 mt-1">Wygenerowanych leadów</p>
-                </div>
-                <div className="text-center">
-                  <div className="font-heading text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#C11369] to-[#049FE3] bg-clip-text text-transparent">
-                    320%
-                  </div>
-                  <p className="font-body text-gray-600 mt-1">Średni wzrost ROAS</p>
-                </div>
-              </div>
+
             </div>
           </div>
         </section>
 
         {/* Filters */}
-        <section className="py-8 bg-gray-50 sticky top-20 z-30">
+        <section className="py-2 bg-gray-50 sticky top-20 z-30">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-center gap-4 flex-wrap">
               <Filter className="w-5 h-5 text-gray-500" />

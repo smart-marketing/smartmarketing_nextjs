@@ -89,120 +89,122 @@ export default function SmartCommerceCases() {
           </p>
         </div>
 
-        {/* Case Studies Grid - 2 columns */}
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
-            {caseStudies.map((study, index) => (
-              <div
-                key={study.id}
-                className={`transition-all duration-700 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
-                style={{ transitionDelay: `${index * 150}ms` }}
-              >
-                <div className="group h-full">
-                  <div className="relative bg-white rounded-3xl border border-gray-200 hover:border-gray-300 hover:shadow-2xl transition-all duration-300 h-full flex flex-col overflow-hidden">
-                    {/* Top gradient bar */}
-                    <div className={`h-2 bg-gradient-to-r ${study.gradient}`} />
-                    
-                    {/* Case number badge */}
-                    <div className="absolute top-6 right-6 w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center">
-                      <span className="font-heading text-2xl font-bold text-gray-400">
-                        #{study.id}
-                      </span>
-                    </div>
-                    
-                    {/* Content */}
-                    <div className="p-8 flex-1 flex flex-col">
-                      {/* Title and Icon */}
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className={`w-12 h-12 bg-gradient-to-br ${study.gradient} rounded-xl flex items-center justify-center text-white`}>
-                          {study.icon}
+        {/* Case Studies Carousel - horizontal scroll */}
+        <div className="relative">
+          <div className="overflow-x-auto scrollbar-hide">
+            <div className="flex gap-6 pb-4 px-4 md:px-0">
+              {caseStudies.map((study, index) => (
+                <div
+                  key={study.id}
+                  className={`flex-shrink-0 w-[85vw] md:w-[420px] transition-all duration-700 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  }`}
+                  style={{ transitionDelay: `${index * 150}ms` }}
+                >
+                  <div className="group h-full">
+                    <div className="relative bg-white rounded-3xl border border-gray-200 hover:border-gray-300 hover:shadow-2xl transition-all duration-300 h-full flex flex-col overflow-hidden">
+                      {/* Top gradient bar */}
+                      <div className={`h-2 bg-gradient-to-r ${study.gradient}`} />
+                      
+                      {/* Case number badge */}
+                      <div className="absolute top-6 right-6 w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center">
+                        <span className="font-heading text-2xl font-bold text-gray-400">
+                          #{study.id}
+                        </span>
+                      </div>
+                      
+                      {/* Content */}
+                      <div className="p-8 flex-1 flex flex-col">
+                        {/* Title and Icon */}
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className={`w-12 h-12 bg-gradient-to-br ${study.gradient} rounded-xl flex items-center justify-center text-white`}>
+                            {study.icon}
+                          </div>
+                          <h3 className="font-heading text-xl font-bold text-[#333333]">
+                            {study.title}
+                          </h3>
                         </div>
-                        <h3 className="font-heading text-xl font-bold text-[#333333]">
-                          {study.title}
-                        </h3>
-                      </div>
 
-                      {/* Main Result */}
-                      <div className="mb-4">
-                        <p className={`font-heading text-3xl lg:text-4xl font-bold bg-gradient-to-r ${study.gradient} bg-clip-text text-transparent mb-1`}>
-                          {study.mainResult}
-                        </p>
-                        <p className="font-body text-gray-600">
-                          {study.timeFrame}
-                        </p>
-                      </div>
-
-                      {/* Subtitle */}
-                      <p className="font-heading font-semibold text-gray-700 mb-4">
-                        {study.subtitle}
-                      </p>
-
-                      {/* Description */}
-                      <div className="space-y-2 mb-6 flex-1">
-                        {study.description.map((line, i) => (
-                          <p key={i} className="font-body text-sm text-gray-600 leading-relaxed">
-                            {line}
+                        {/* Main Result */}
+                        <div className="mb-4">
+                          <p className={`font-heading text-3xl lg:text-4xl font-bold bg-gradient-to-r ${study.gradient} bg-clip-text text-transparent mb-1`}>
+                            {study.mainResult}
                           </p>
-                        ))}
-                      </div>
+                          <p className="font-body text-gray-600">
+                            {study.timeFrame}
+                          </p>
+                        </div>
 
-                      {/* Key factors */}
-                      <div className="bg-gray-50 rounded-xl p-4 mb-6">
-                        <p className="font-heading font-semibold text-xs text-gray-500 uppercase mb-2">
-                          Kluczowe elementy sukcesu:
+                        {/* Subtitle */}
+                        <p className="font-heading font-semibold text-gray-700 mb-4">
+                          {study.subtitle}
                         </p>
-                        <p className="font-body text-sm text-gray-700">
-                          {study.keyFactors}
-                        </p>
-                      </div>
 
-                      {/* Metrics Badge */}
-                      <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl p-3 mb-6">
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-2">
-                            <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center text-gray-600">
-                              {study.metrics.icon}
+                        {/* Description */}
+                        <div className="space-y-2 mb-6 flex-1">
+                          {study.description.map((line, i) => (
+                            <p key={i} className="font-body text-sm text-gray-600 leading-relaxed">
+                              {line}
+                            </p>
+                          ))}
+                        </div>
+
+                        {/* Key factors */}
+                        <div className="bg-gray-50 rounded-xl p-4 mb-6">
+                          <p className="font-heading font-semibold text-xs text-gray-500 uppercase mb-2">
+                            Kluczowe elementy sukcesu:
+                          </p>
+                          <p className="font-body text-sm text-gray-700">
+                            {study.keyFactors}
+                          </p>
+                        </div>
+
+                        {/* Metrics Badge */}
+                        <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl p-3 mb-6">
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-2">
+                              <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center text-gray-600">
+                                {study.metrics.icon}
+                              </div>
+                              <span className="font-body text-xs text-gray-600">
+                                {study.metrics.label}
+                              </span>
                             </div>
-                            <span className="font-body text-xs text-gray-600">
-                              {study.metrics.label}
+                            <span className={`font-heading font-bold bg-gradient-to-r ${study.gradient} bg-clip-text text-transparent`}>
+                              {study.metrics.value}
                             </span>
                           </div>
-                          <span className={`font-heading font-bold bg-gradient-to-r ${study.gradient} bg-clip-text text-transparent`}>
-                            {study.metrics.value}
+                        </div>
+
+                        {/* Market & Industry */}
+                        <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
+                          <div className="flex items-center gap-1">
+                            <MapPin className="w-4 h-4" />
+                            <span className="font-body">{study.market}</span>
+                          </div>
+                          <span className="text-gray-300">|</span>
+                          <div className="flex items-center gap-1">
+                            <Briefcase className="w-4 h-4" />
+                            <span className="font-body">{study.industry}</span>
+                          </div>
+                        </div>
+
+                        {/* CTA */}
+                        <a
+                          href={study.href}
+                          className={`group/btn flex items-center justify-center gap-2 w-full py-3 px-6 rounded-xl border-2 border-gray-200 hover:border-gray-300 bg-white hover:bg-gray-50 transition-all duration-300`}
+                        >
+                          <span className="font-heading font-semibold text-gray-700">
+                            Sprawdź pełne case study
                           </span>
-                        </div>
+                          <ArrowRight className="w-4 h-4 text-gray-500 group-hover/btn:translate-x-1 transition-transform" />
+                        </a>
                       </div>
-
-                      {/* Market & Industry */}
-                      <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
-                        <div className="flex items-center gap-1">
-                          <MapPin className="w-4 h-4" />
-                          <span className="font-body">{study.market}</span>
-                        </div>
-                        <span className="text-gray-300">|</span>
-                        <div className="flex items-center gap-1">
-                          <Briefcase className="w-4 h-4" />
-                          <span className="font-body">{study.industry}</span>
-                        </div>
-                      </div>
-
-                      {/* CTA */}
-                      <a
-                        href={study.href}
-                        className={`group/btn flex items-center justify-center gap-2 w-full py-3 px-6 rounded-xl border-2 border-gray-200 hover:border-gray-300 bg-white hover:bg-gray-50 transition-all duration-300`}
-                      >
-                        <span className="font-heading font-semibold text-gray-700">
-                          Sprawdź pełne case study
-                        </span>
-                        <ArrowRight className="w-4 h-4 text-gray-500 group-hover/btn:translate-x-1 transition-transform" />
-                      </a>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
