@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useRef, useState } from 'react'
-import { Phone, FileText, Settings, Rocket, TrendingUp, CheckCircle, Clock, Users, BarChart3, Target } from 'lucide-react'
+import { Phone, FileText, Settings, Rocket, TrendingUp, CheckCircle, Clock } from 'lucide-react'
 
 export default function SmartLeadsProcess() {
   const [isVisible, setIsVisible] = useState(false)
@@ -117,10 +117,10 @@ export default function SmartLeadsProcess() {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Heading */}
-        <div className={`text-center mb-16 transition-all duration-1000 ${
+        <div className={`text-center mb-12 lg:mb-16 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] mb-4">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] mb-4">
             JAK TO DZIAŁA - <span className="bg-gradient-to-r from-[#C11369] to-[#049FE3] bg-clip-text text-transparent">REALNY PROCES</span> WSPÓŁPRACY
           </h2>
         </div>
@@ -158,26 +158,40 @@ export default function SmartLeadsProcess() {
           </div>
         </div>
 
-        {/* Step Details */}
-        <div className="max-w-5xl mx-auto">
-          {/* Mobile: All steps visible */}
-          <div className="lg:hidden space-y-8">
-            {steps.map((step, index) => (
-              <div
-                key={index}
-                className={`transition-all duration-700 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
-                style={{ transitionDelay: `${index * 150}ms` }}
-              >
-                <StepCard step={step} />
-              </div>
-            ))}
-          </div>
+        {/* Step Details - Desktop (active step only) */}
+        <div className="hidden lg:block max-w-5xl mx-auto">
+          <StepCard step={steps[activeStep]} />
+        </div>
 
-          {/* Desktop: Active step only */}
-          <div className="hidden lg:block">
-            <StepCard step={steps[activeStep]} />
+        {/* Mobile Horizontal Carousel */}
+        <div className="lg:hidden">
+          <div className="relative">
+            {/* Scroll container */}
+            <div className="overflow-x-auto scrollbar-hide pb-4 pt-4 -mx-4 px-4">
+              <div className="flex gap-4" style={{ width: 'max-content' }}>
+                {steps.map((step, index) => (
+                  <div
+                    key={index}
+                    className="w-[85vw] flex-shrink-0"
+                    style={{ maxWidth: '400px' }}
+                  >
+                    <div className="mt-2">
+                      <StepCard step={step} mobile />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Scroll indicators */}
+            <div className="flex justify-center gap-2 mt-6">
+              {steps.map((_, index) => (
+                <div
+                  key={index}
+                  className="w-2 h-2 rounded-full bg-gray-300"
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -185,39 +199,39 @@ export default function SmartLeadsProcess() {
   )
 }
 
-function StepCard({ step }: { step: any }) {
+function StepCard({ step, mobile = false }: { step: any; mobile?: boolean }) {
   return (
-    <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+    <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden h-full">
       {/* Header */}
-      <div className={`bg-gradient-to-r ${step.bgColor} p-8 border-b border-gray-100`}>
+      <div className={`bg-gradient-to-r ${step.bgColor} p-6 ${mobile ? 'lg:p-8' : 'p-8'} border-b border-gray-100`}>
         <div className="flex items-start justify-between mb-4">
-          <div className="flex items-center gap-4">
-            <span className="text-4xl">{step.emoji}</span>
+          <div className="flex items-center gap-3 lg:gap-4">
+            <span className={`${mobile ? 'text-3xl lg:text-4xl' : 'text-4xl'}`}>{step.emoji}</span>
             <div>
-              <h3 className="font-heading text-2xl font-bold text-[#333333]">
+              <h3 className={`font-heading ${mobile ? 'text-lg lg:text-2xl' : 'text-2xl'} font-bold text-[#333333]`}>
                 KROK {step.number}: {step.title}
               </h3>
-              <p className="font-body text-gray-600 mt-1">
-                <Clock className="inline w-4 h-4 mr-1" />
+              <p className={`font-body text-gray-600 mt-1 ${mobile ? 'text-sm lg:text-base' : 'text-base'}`}>
+                <Clock className="inline w-3 h-3 lg:w-4 lg:h-4 mr-1" />
                 {step.duration}
               </p>
             </div>
           </div>
         </div>
-        <p className="font-heading font-semibold text-lg text-[#333333]">
+        <p className={`font-heading font-semibold ${mobile ? 'text-base lg:text-lg' : 'text-lg'} text-[#333333]`}>
           {step.subtitle}
         </p>
       </div>
 
       {/* Features */}
-      <div className="p-8">
-        <div className="space-y-4">
+      <div className={`${mobile ? 'p-5 lg:p-8' : 'p-8'}`}>
+        <div className="space-y-3 lg:space-y-4">
           {step.features.map((feature: string, index: number) => (
             <div key={index} className="flex items-start gap-3">
-              <div className={`w-6 h-6 bg-gradient-to-br ${step.color} rounded-full flex items-center justify-center flex-shrink-0 mt-0.5`}>
-                <CheckCircle className="w-4 h-4 text-white" />
+              <div className={`w-5 h-5 lg:w-6 lg:h-6 bg-gradient-to-br ${step.color} rounded-full flex items-center justify-center flex-shrink-0 mt-0.5`}>
+                <CheckCircle className="w-3 h-3 lg:w-4 lg:h-4 text-white" />
               </div>
-              <p className="font-body text-gray-700">
+              <p className={`font-body text-gray-700 ${mobile ? 'text-sm lg:text-base' : 'text-base'}`}>
                 {feature}
               </p>
             </div>

@@ -54,7 +54,7 @@ export default function ProblemsSection() {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Heading */}
-        <div className={`max-w-4xl mx-auto text-center mb-16 transition-all duration-1000 ${
+        <div className={`max-w-4xl mx-auto text-center mb-12 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <h2 className="font-heading text-2xl md:text-3xl lg:text-3xl font-bold text-[#333333] mb-6">
@@ -64,8 +64,8 @@ export default function ProblemsSection() {
           </h2>
         </div>
 
-        {/* Problems Grid */}
-        <div className="max-w-6xl mx-auto mb-16">
+        {/* Problems - Desktop Grid */}
+        <div className="hidden md:block max-w-6xl mx-auto mb-16">
           <div className="grid md:grid-cols-2 gap-6">
             {problems.map((problem, index) => (
               <div
@@ -100,23 +100,72 @@ export default function ProblemsSection() {
           </div>
         </div>
 
+        {/* Problems - Mobile Horizontal Carousel */}
+        <div className="md:hidden mb-16">
+          <div className="relative">
+            {/* Scroll container */}
+            <div className="overflow-x-auto scrollbar-hide pb-4 pt-4 -mx-4 px-4">
+              <div className="flex gap-4" style={{ width: 'max-content' }}>
+                {problems.map((problem, index) => (
+                  <div
+                    key={index}
+                    className="w-[75vw] flex-shrink-0"
+                    style={{ maxWidth: '340px' }}
+                  >
+                    <div className="group relative bg-white rounded-2xl p-6 border border-gray-200 hover:border-red-300 shadow-lg h-full mt-4">
+                      {/* Problem indicator */}
+                      <div className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center text-white shadow-lg">
+                        <span className="text-xl font-bold">✕</span>
+                      </div>
+                      
+                      <div className="flex flex-col gap-4">
+                        <div className="flex-shrink-0 w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-red-600">
+                          {problem.icon}
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="font-heading font-semibold text-lg text-[#333333] mb-3">
+                            {problem.title}
+                          </h3>
+                          <p className="font-body text-gray-600 leading-relaxed text-sm">
+                            {problem.description}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Scroll indicator */}
+            <div className="flex justify-center gap-2 mt-6">
+              {problems.map((_, index) => (
+                <div
+                  key={index}
+                  className="w-2 h-2 rounded-full bg-gray-300"
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Message */}
         <div className={`max-w-4xl mx-auto transition-all duration-1000 delay-700 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <div className="relative">
             {/* Decorative line */}
-            <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-px h-16 bg-gradient-to-b from-transparent via-gray-300 to-transparent" />
+            <div className="absolute left-1/2 -translate-x-1/2 -top-8 w-px h-16 bg-gradient-to-b from-transparent via-gray-300 to-transparent hidden md:block" />
             
-            <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 md:p-10 border border-gray-100 shadow-lg">
-              <div className="text-center mb-8">
-                <p className="font-body text-lg text-gray-700 mb-2">
+            <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl p-6 md:p-10 border border-gray-100 shadow-lg">
+              <div className="text-center mb-6 md:mb-8">
+                <p className="font-body text-base md:text-lg text-gray-700 mb-2">
                   <span className="font-semibold text-[#333333]">Nie jesteś w tym sam</span> - w ciągu 
                   <span className="font-bold text-[#C11369]"> 5 lat </span> 
                   współpracy z 
                   <span className="font-bold text-[#049FE3]"> 80+ firmami</span>
                 </p>
-                <p className="font-body text-lg text-gray-700">
+                <p className="font-body text-base md:text-lg text-gray-700">
                   zauważyliśmy te same problemy u większości klientów.
                 </p>
               </div>
@@ -128,10 +177,10 @@ export default function ProblemsSection() {
                     <CheckCircle className="w-6 h-6" />
                   </div>
                   <div>
-                    <p className="font-body text-gray-700 mb-2">
+                    <p className="font-body text-gray-700 mb-2 text-sm md:text-base">
                       Dlatego stworzyliśmy <span className="font-heading font-bold bg-gradient-to-r from-[#C11369] to-[#049FE3] bg-clip-text text-transparent">Smart Marketing</span>
                     </p>
-                    <p className="font-heading text-xl font-semibold text-[#333333]">
+                    <p className="font-heading text-lg md:text-xl font-semibold text-[#333333]">
                       skuteczny model pozyskiwania klientów dla małych i średnich firm.
                     </p>
                   </div>
@@ -139,10 +188,10 @@ export default function ProblemsSection() {
               </div>
 
               {/* CTA */}
-              <div className="flex justify-center mt-8">
+              <div className="flex justify-center mt-6 md:mt-8">
                 <a
                   href="/o-nas"
-                  className="group inline-flex items-center gap-2 text-[#C11369] font-heading font-semibold hover:gap-4 transition-all duration-300"
+                  className="group inline-flex items-center gap-2 text-[#C11369] font-heading font-semibold hover:gap-4 transition-all duration-300 text-sm md:text-base"
                 >
                   <span>Zobacz jak rozwiązujemy te problemy</span>
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

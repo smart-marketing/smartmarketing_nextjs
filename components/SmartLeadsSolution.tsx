@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useRef, useState } from 'react'
-import { Target, BarChart3, RefreshCw, Brain, MessageCircle, CheckCircle, TrendingUp, Zap, Users, FileText } from 'lucide-react'
+import { Target, BarChart3, RefreshCw, Brain, MessageCircle, CheckCircle, TrendingUp } from 'lucide-react'
 
 export default function SmartLeadsSolution() {
   const [isVisible, setIsVisible] = useState(false)
@@ -95,16 +95,16 @@ export default function SmartLeadsSolution() {
       
       <div className="container mx-auto px-4 relative z-10">
         {/* Heading */}
-        <div className={`max-w-4xl mx-auto text-center mb-8 transition-all duration-1000 ${
+        <div className={`max-w-4xl mx-auto text-center mb-12 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] mb-6">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] mb-6">
             <span className="bg-gradient-to-r from-[#C11369] to-[#049FE3] bg-clip-text text-transparent">SmartLeads Engine</span>
             <br />
             Kompletny system leadów, nie tylko kampanie
           </h2>
-          <div className="bg-gradient-to-r from-gray-100 to-gray-50 rounded-2xl p-6 inline-block">
-            <p className="font-body text-lg text-gray-700">
+          <div className="bg-gradient-to-r from-gray-100 to-gray-50 rounded-2xl p-4 md:p-6 inline-block">
+            <p className="font-body text-base md:text-lg text-gray-700">
               <span className="font-semibold">Różnica między nami a innymi agencjami?</span>
               <br />
               My budujemy cały system, nie tylko uruchamiamy reklamy.
@@ -112,8 +112,8 @@ export default function SmartLeadsSolution() {
           </div>
         </div>
 
-        {/* Solutions Grid */}
-        <div className="max-w-7xl mx-auto mb-16">
+        {/* Solutions - Desktop Vertical List */}
+        <div className="hidden md:block max-w-7xl mx-auto mb-16">
           <div className="space-y-8">
             {solutions.map((solution, index) => (
               <div
@@ -156,24 +156,81 @@ export default function SmartLeadsSolution() {
           </div>
         </div>
 
+        {/* Solutions - Mobile Horizontal Carousel */}
+        <div className="md:hidden mb-16">
+          <div className="relative">
+            {/* Scroll container */}
+            <div className="overflow-x-auto scrollbar-hide pb-4 pt-4 -mx-4 px-4">
+              <div className="flex gap-4" style={{ width: 'max-content' }}>
+                {solutions.map((solution, index) => (
+                  <div
+                    key={index}
+                    className="w-[85vw] flex-shrink-0"
+                    style={{ maxWidth: '380px' }}
+                  >
+                    <div className={`group relative bg-white rounded-3xl border ${solution.highlight ? 'border-[#C11369]/30 shadow-xl' : 'border-gray-200'} hover:shadow-2xl transition-all duration-300 overflow-hidden h-full mt-2`}>
+                      {/* Gradient bar */}
+                      <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${solution.gradient}`} />
+                      
+                      <div className="p-6">
+                        {/* Header */}
+                        <div className="flex flex-col gap-3 mb-6">
+                          <span className="text-4xl">{solution.emoji}</span>
+                          <h3 className="font-heading font-bold text-lg text-[#333333]">
+                            {solution.title}
+                          </h3>
+                        </div>
+
+                        {/* Features */}
+                        <div className="space-y-3">
+                          {solution.features.map((feature, fIndex) => (
+                            <div key={fIndex} className="flex items-start gap-3">
+                              <div className={`w-5 h-5 bg-gradient-to-br ${solution.gradient} rounded-full flex items-center justify-center flex-shrink-0 mt-0.5`}>
+                                <CheckCircle className="w-3 h-3 text-white" />
+                              </div>
+                              <p className="font-body text-xs text-gray-700 leading-relaxed">
+                                {feature}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Scroll indicators */}
+            <div className="flex justify-center gap-2 mt-6">
+              {solutions.map((_, index) => (
+                <div
+                  key={index}
+                  className="w-2 h-2 rounded-full bg-gray-300"
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Result Box */}
         <div className={`max-w-4xl mx-auto transition-all duration-1000 delay-900 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-[#C11369] to-[#049FE3] rounded-3xl blur-xl opacity-20" />
-            <div className="relative bg-gradient-to-br from-white via-gray-50 to-white rounded-3xl p-8 border border-[#C11369]/20">
+            <div className="relative bg-gradient-to-br from-white via-gray-50 to-white rounded-3xl p-6 md:p-8 border border-[#C11369]/20">
               <div className="text-center">
-                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-400 to-green-500 text-white rounded-full px-6 py-2 mb-6">
-                  <TrendingUp className="w-5 h-5" />
-                  <span className="font-heading font-bold">REZULTAT</span>
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-400 to-green-500 text-white rounded-full px-4 md:px-6 py-2 mb-4 md:mb-6">
+                  <TrendingUp className="w-4 h-4 md:w-5 md:h-5" />
+                  <span className="font-heading font-bold text-sm md:text-base">REZULTAT</span>
                 </div>
-                <p className="font-heading text-2xl font-bold text-[#333333]">
+                <p className="font-heading text-xl md:text-2xl font-bold text-[#333333]">
                   Przewidywalny system 
                   <span className="bg-gradient-to-r from-[#C11369] to-[#049FE3] bg-clip-text text-transparent"> 50+ jakościowych leadów </span>
                   miesięcznie
                 </p>
-                <p className="font-body text-lg text-gray-600 mt-2">
+                <p className="font-body text-base md:text-lg text-gray-600 mt-2">
                   zamiast loterii reklamowej
                 </p>
               </div>

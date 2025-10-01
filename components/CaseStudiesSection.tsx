@@ -107,11 +107,11 @@ export default function CaseStudiesSection() {
 
         {/* Case Studies Grid */}
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-x-visible snap-x snap-mandatory scrollbar-hide pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0">
             {caseStudies.map((study, index) => (
               <div
                 key={study.id}
-                className={`transition-all duration-700 ${
+                className={`flex-shrink-0 w-[85vw] md:w-auto snap-center transition-all duration-700 ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
@@ -135,7 +135,7 @@ export default function CaseStudiesSection() {
                         <div className={`w-12 h-12 bg-gradient-to-br ${study.gradient} rounded-xl flex items-center justify-center text-white`}>
                           {study.icon}
                         </div>
-                        <h3 className="font-heading text-xl font-bold text-[#333333]">
+                        <h3 className="font-heading text-l font-bold text-[#333333]">
                           {study.title}
                         </h3>
                       </div>

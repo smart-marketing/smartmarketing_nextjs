@@ -102,17 +102,17 @@ export default function SmartLeadsProblems() {
 
         {/* Problems - Mobile Horizontal Scroll */}
         <div className="md:hidden mb-16">
-          <div className="relative -mx-4 px-4">
+          <div className="relative">
             {/* Scroll container */}
-            <div className="overflow-x-auto scrollbar-hide pb-4">
+            <div className="overflow-x-auto scrollbar-hide pb-4 pt-4 -mx-4 px-4">
               <div className="flex gap-4" style={{ width: 'max-content' }}>
                 {problems.map((problem, index) => (
                   <div
                     key={index}
-                    className="w-[85vw] flex-shrink-0"
-                    style={{ maxWidth: '380px' }}
+                    className="w-[75vw] flex-shrink-0"
+                    style={{ maxWidth: '340px' }}
                   >
-                    <div className="group relative bg-white rounded-2xl p-6 border border-gray-200 hover:border-red-300 shadow-lg h-full">
+                    <div className="group relative bg-white rounded-2xl p-6 border border-gray-200 hover:border-red-300 shadow-lg h-full mt-4">
                       {/* Problem indicator */}
                       <div className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center text-white shadow-lg">
                         <span className="text-xl font-bold">✕</span>
@@ -138,7 +138,7 @@ export default function SmartLeadsProblems() {
             </div>
             
             {/* Scroll indicator */}
-            <div className="flex justify-center gap-2 mt-4">
+            <div className="flex justify-center gap-2 mt-6">
               {problems.map((_, index) => (
                 <div
                   key={index}
