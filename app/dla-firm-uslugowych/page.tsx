@@ -35,7 +35,7 @@ export default function SmartLeadsPage() {
       <Header />
       <main className="min-h-screen bg-white">
         {/* Hero Section - podobny do głównej strony */}
-        <section className="h-screen relative overflow-hidden flex items-center pt-24 lg:pt-20">
+        <section className="min-h-[85vh] lg:h-screen relative overflow-hidden flex items-center pt-28 pb-16 lg:pt-20">
           {/* Animated gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50/50 to-white">
             <div className="absolute inset-0">
@@ -58,13 +58,13 @@ export default function SmartLeadsPage() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-5xl mx-auto pt-10">
               {/* Main heading */}
-              <h1 
-                className={`font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-6xl font-bold text-center mb-6 leading-tight transition-all duration-1000 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
-              >
+                <h1 
+                  className={`font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center mb-4 lg:mb-6 leading-tight transition-all duration-1000 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  }`}
+                >
                 <span className="text-[#333333]">Zamieniamy </span>
                 <span className="bg-gradient-to-r from-[#C11369] to-[#049FE3] bg-clip-text text-transparent">
                   chaotyczny marketing
@@ -75,9 +75,9 @@ export default function SmartLeadsPage() {
               </h1>
 
               {/* Transformation showcase */}
-              <div 
-                className={`flex flex-col md:flex-row gap-4 md:gap-6 max-w-6xl mx-auto mb-6 transition-all duration-1000 delay-300 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                <div 
+                  className={`flex flex-col md:flex-row gap-3 md:gap-6 max-w-6xl mx-auto mb-4 lg:mb-6 transition-all duration-1000 delay-300 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
               >
                 {/* FROM */}
@@ -90,7 +90,7 @@ export default function SmartLeadsPage() {
                       </div>
                       <span className="font-heading font-semibold text-gray-600 uppercase text-xs tracking-wider">OD</span>
                     </div>
-                    <p className="font-body text-sm md:text-base text-gray-700">
+                    <p className="font-body text-xs sm:text-sm md:text-base text-gray-700">
                       frustracji <span className="font-semibold text-red-600">drogimi kampaniami</span> i przypadkowymi zapytaniami
                     </p>
                   </div>
@@ -120,10 +120,11 @@ export default function SmartLeadsPage() {
                 }`}
               >
                 <a
-                  href="#kontakt"
-                  className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white px-8 py-4 rounded-full font-heading font-semibold hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                  href="/kontakt"
+                  className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white px-6 py-3 lg:px-8 lg:py-4 rounded-full font-heading font-semibold text-sm lg:text-base hover:shadow-2xl transition-all duration-300 hover:scale-105"
                 >
-                  <span>Umów SmartCheck - sprawdź potencjał za 0 zł</span>
+                  <span className="hidden sm:inline">Umów SmartCheck - sprawdź potencjał za 0 zł</span>
+                  <span className="sm:hidden">Umów SmartCheck za 0 zł</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   <div className="absolute inset-0 bg-gradient-to-r from-[#049FE3] to-[#C11369] rounded-full opacity-0 group-hover:opacity-100 transition-opacity -z-10 blur-xl" />
                 </a>
@@ -131,21 +132,21 @@ export default function SmartLeadsPage() {
 
               {/* Trust indicators */}
               <div 
-                className={`flex flex-wrap justify-center items-center gap-6 md:gap-12 mt-10 transition-all duration-1000 delay-900 ${
+                className={`flex flex-wrap justify-center items-center gap-4 md:gap-12 mt-6 lg:mt-10 transition-all duration-1000 delay-900 ${
                   isVisible ? 'opacity-100' : 'opacity-0'
                 }`}
               >
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
-                    <img src="/investsolar.png" alt="InvestSolar" className="w-8 h-8 rounded-full border-2 border-white object-contain bg-white" />
-                    <img src="/tartak.png" alt="Bielińscy Drewno" className="w-8 h-8 rounded-full border-2 border-white object-contain bg-white" />
-                    <img src="/hidrami.png" alt="Hidrami" className="w-8 h-8 rounded-full border-2 border-white object-contain bg-white" />
+                    <img src="/investsolar.png" alt="InvestSolar" className="w-6 h-6 lg:w-8 lg:h-8 rounded-full border-2 border-white object-contain bg-white" />
+                    <img src="/tartak.png" alt="Bielińscy Drewno" className="w-6 h-6 lg:w-8 lg:h-8 rounded-full border-2 border-white object-contain bg-white" />
+                    <img src="/hidrami.png" alt="Hidrami" className="w-6 h-6 lg:w-8 lg:h-8 rounded-full border-2 border-white object-contain bg-white" />
                   </div>
-                  <span className="font-body text-sm text-gray-600">50+ firm usługowych</span>
+                  <span className="font-body text-xs lg:text-sm text-gray-600">50+ firm</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="font-heading font-bold text-[#C11369]">5000+</span>
-                  <span className="font-body text-sm text-gray-600">wygenerowanych leadów</span>
+                <div className="flex items-center gap-1 lg:gap-2">
+                  <span className="font-heading font-bold text-lg lg:text-xl text-[#C11369]">5000+</span>
+                  <span className="font-body text-xs lg:text-sm text-gray-600">wygenerowanych leadów</span>
                 </div>
               </div>
             </div>
