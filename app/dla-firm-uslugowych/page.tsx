@@ -58,10 +58,10 @@ export default function SmartLeadsPage() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-5xl mx-auto pt-30">
+            <div className="max-w-5xl mx-auto pt-20">
               {/* Main heading */}
                 <h1 
-                  className={`font-heading text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center mb-4 lg:mb-6 leading-tight transition-all duration-1000 ${
+                  className={`font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center mb-4 lg:mb-6 leading-tight transition-all duration-1000 ${
                     isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                   }`}
                 >
