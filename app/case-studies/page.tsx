@@ -31,8 +31,8 @@ export default function CaseStudiesPage() {
     {
       id: 2,
       category: 'ecommerce',
-      title: "Niemiecki E-commerce",
-      mainResult: "100k zł sprzedaży",
+      title: "E-commerce na rynek DE",
+      mainResult: "100k+ zł sprzedaży",
       timeFrame: "w 4 miesiące",
       description: "Nowa marka, nowy rynek, start od zera. Tylko kampanie Google Ads przyniosły 100k zł obrotów w 4 miesiące.",
       market: "Niemcy",
@@ -44,7 +44,7 @@ export default function CaseStudiesPage() {
         value: "4.2x"
       },
       image: "/case-niemiecki.jpg",
-      href: "/case-studies/niemiecki-ecommerce"
+      href: "/case-studies/ecommerce-de"
     },
     {
       id: 3,

@@ -120,7 +120,7 @@ export default function SmartLeadsPage() {
                 }`}
               >
                 <a
-                  href="/kontakt"
+                  href="#kontakt"
                   className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white px-6 py-3 lg:px-8 lg:py-4 rounded-full font-heading font-semibold text-sm lg:text-base hover:shadow-2xl transition-all duration-300 hover:scale-105"
                 >
                   <span className="hidden sm:inline">Umów SmartCheck - sprawdź potencjał za 0 zł</span>

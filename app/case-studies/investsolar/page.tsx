@@ -335,10 +335,10 @@ i zaczęła generować leady prowadzące do rzeczywistej sprzedaży.
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#333333] mb-6">
+                <h2 className="font-heading text-2xl md:text-3xl font-bold text-[#333333] mb-6">
                   Progres w liczbach
                 </h2>
-                <p className="font-body text-xl text-gray-600">
+                <p className="font-body text-l text-gray-600">
                   6 miesięcy systematycznego wzrostu
                 </p>
               </div>
@@ -359,7 +359,7 @@ i zaczęła generować leady prowadzące do rzeczywistej sprzedaży.
                           <div className="font-heading text-sm text-[#C11369] font-semibold mb-2">
                             {item.month}
                           </div>
-                          <div className="text-3xl font-heading font-bold text-[#333333] mb-2">
+                          <div className="text-xl font-heading font-bold text-[#333333] mb-2">
                             {item.leads > 0 ? `${item.leads.toLocaleString()} leadów` : item.label}
                           </div>
                           {item.leads > 0 && (
