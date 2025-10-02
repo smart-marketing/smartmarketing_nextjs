@@ -62,7 +62,7 @@ export default function CaseStudiesPage() {
         value: "77%"
       },
       image: "/case-oze.jpg",
-      href: "/case-studies/instalacje-oze"
+      href: "/case-studies/investsolar"
     },
     {
       id: 4,
@@ -118,7 +118,7 @@ export default function CaseStudiesPage() {
         </section>
 
         {/* Filters */}
-        <section className="py-2 bg-gray-50 sticky top-20 z-30">
+        <section className="py-2 bg-gray-50 md:sticky md:top-20 z-30">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-center gap-4 flex-wrap">
               <Filter className="w-5 h-5 text-gray-500" />

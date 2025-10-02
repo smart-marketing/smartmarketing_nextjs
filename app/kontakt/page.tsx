@@ -137,7 +137,7 @@ export default function ContactPage() {
                           Miłosz Wein
                         </h3>
                         <p className="font-body text-sm text-gray-600 mb-2">
-                          Owner & Digital Marketing Specialist
+                          Właściciel Agencji, Specjalista ds Marketingu
                         </p>
                         <a
                           href="https://pl.linkedin.com/in/mi%C5%82osz-wein-2a643422a"

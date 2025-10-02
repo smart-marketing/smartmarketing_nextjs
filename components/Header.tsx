@@ -131,7 +131,7 @@ export default function Header() {
               
               {/* CTA Button */}
               <a
-                href="/kontakt"
+                href="/smartcheck"
                 className="bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white px-6 py-3 rounded-full font-heading font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 Bezpłatna konsultacja

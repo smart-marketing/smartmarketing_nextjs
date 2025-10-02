@@ -114,7 +114,7 @@ export default function BlogPage() {
         </section>
 
         {/* Categories Filter */}
-        <section className="py-8 bg-white sticky top-20 z-30 border-b border-gray-100">
+        <section className="py-8 bg-white md:sticky md:top-20 z-30 border-b border-gray-100">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-center gap-4 flex-wrap">
               <Filter className="w-5 h-5 text-gray-500" />

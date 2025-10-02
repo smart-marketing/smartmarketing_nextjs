@@ -26,7 +26,7 @@ import {
   Play,
   Euro,
   Building2,
-  Settings,
+  Facebook,
   MessageSquare
 } from 'lucide-react'
 
@@ -40,34 +40,34 @@ export default function MarkostalCaseStudy() {
 
   // Dane do wykresu postępu
   const timeline = [
-    { month: 'Listopad 2024', leads: 0, label: 'Start współpracy' },
-    { month: 'Grudzień 2024', leads: 320, label: 'Pierwsze rezultaty' },
-    { month: 'Styczeń 2025', leads: 850, label: 'Optymalizacja' },
-    { month: 'Marzec 2025', leads: 2100, label: 'Skalowanie' },
-    { month: 'Maj 2025', leads: 3500, label: 'Stabilny wzrost' },
-    { month: 'Sierpień 2025', leads: 5300, label: '5300+ leadów!' }
+    { month: 'Maj 2023', leads: 0, label: 'Audyt dotychczasowych działań' },
+    { month: 'Czerwiec 2023', leads: 56, label: 'Pierwsze rezultaty w Meta Ads' },
+    { month: 'Lipiec 2023', leads: 113, label: 'Rozszerzenie współpracy o Google Ads' },
+    { month: 'Sierpień 2023', leads: 467, label: 'Kolejne nowe kanały: TikTok i Microsoft Ads' },
+    { month: 'Wrzesień 2023', leads: 680, label: 'Boom najskuteczniejszych wyników' },
+    { month: 'Grudzień 2023', leads: 1127, label: 'Ponad 2 miliony złotych sprzedaży w 6 miesięcy' }
   ]
 
   const problems = [
     {
       icon: <AlertCircle className="w-6 h-6" />,
-      title: 'Brak śledzenia źródeł leadów',
-      description: 'Zapytania spływały, ale nikt nie wiedział skąd'
+      title: 'Kampanie bez kwalifikacji leadów',
+      description: 'Mnóstwo "pomyłek" i zapytań od osób niebędących klientammi'
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: 'Kampanie bez konwersji',
-      description: 'Optymalizacja pod ruch, nie pod sprzedaż'
+      title: 'Stosowanie 2-3 kreacji w wielu kampaniach',
+      description: 'W dodatku bardzo słabych i mało konkretnych'
     },
     {
       icon: <MessageSquare className="w-6 h-6" />,
-      title: 'Strona skupiona na firmie',
-      description: '"Witamy na stronie" zamiast wartości dla klienta'
+      title: 'Brak systemu CRM i śledzenia procesu sprzedaży',
+      description: 'Nikt nie wiedział co się dzieje z leadami'
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
       title: 'Zero analityki',
-      description: 'Brak danych do podejmowania decyzji'
+      description: 'Brak danych do podejmowania decyzji, opieranie się jedynie na danych z Facebook'
     }
   ]
 
@@ -80,37 +80,43 @@ export default function MarkostalCaseStudy() {
     },
     {
       number: '02',
-      title: 'Nowa strona + konfigurator',
-      description: 'Treści skupione na problemach klienta, interaktywny konfigurator produktu',
-      icon: <Settings className="w-5 h-5" />
+      title: 'Nowe konkretne reklamy na Facebooku',
+      description: 'Treści, które rozwiewały obiekcje klientów i przedstawiały mocną ofertę',
+      icon: <Facebook className="w-5 h-5" />
     },
     {
       number: '03',
-      title: 'Multi-channel kampanie',
-      description: 'Google Ads (Search + PMAX), Meta Ads, TikTok Ads - każdy kanał z inną strategią',
-      icon: <Rocket className="w-5 h-5" />
+      title: 'Mocny nacisk na video',
+      description: 'Pionowe video z pracownikami firmy i przykładowymi realizacjami',
+      icon: <Play className="w-5 h-5" />
     },
     {
       number: '04',
-      title: 'Ciągła optymalizacja',
-      description: 'Testy kreacji, optymalizacja kosztów, skalowanie tego co działa',
+      title: 'Multi-channel kampanie',
+      description: 'Google Ads (Search + PMAX), Meta Ads, TikTok Ads, Bing Ads - każdy kanał z inną strategią',
+      icon: <Rocket className="w-5 h-5" />
+    },
+    {
+      number: '05',
+      title: 'Wdrożenie systemu CRM',
+      description: 'Kontrola jakości leadów z poszczególnych kanałów i monitoring procesu sprzedaży',
       icon: <TrendingUp className="w-5 h-5" />
     }
   ]
 
   const results = [
-    { value: '5300+', label: 'leadów', sublabel: 'w 10 miesięcy' },
-    { value: '10-25 zł', label: 'koszt leada', sublabel: 'średnio' },
-    { value: '100%', label: 'kwalifikacji', sublabel: 'po zmianie formularza' },
-    { value: '3', label: 'kraje', sublabel: 'Polska, Niemcy, Czechy' }
+    { value: '1126', label: 'leadów', sublabel: 'w 6 miesięcy' },
+    { value: '29 zł', label: 'koszt leada', sublabel: 'średnio' },
+    { value: '77%', label: 'kwalifikacji', sublabel: 'leadów' },
+    { value: '4', label: 'kanały reklamowe', sublabel: 'Google, Meta, TikTok, Bing' }
   ]
 
   const mistakes = [
     'Skupianie się na sobie zamiast na kliencie',
-    'Zła optymalizacja kampanii (ruch zamiast konwersji)',
+    'Sprzedawanie technologii zamiast korzyści',
     'Te same kreacje na wszystkich kanałach',
     'Brak porządnej analityki',
-    'Konkurowanie ceną zamiast budowaniem wartości'
+    'Raportowanie "zasięgów" zamiast sprzedaży'
   ]
 
   return (
@@ -137,33 +143,33 @@ export default function MarkostalCaseStudy() {
                   Case Studies
                 </Link>
                 <ChevronRight className="w-4 h-4 text-gray-400" />
-                <span className="text-[#333333] font-semibold">Markostal</span>
+                <span className="text-[#333333] font-semibold">Invest Solar</span>
               </nav>
 
               {/* Company badge */}
               <div className="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-full shadow-lg mb-8">
                 <Building2 className="w-5 h-5 text-[#C11369]" />
-                <span className="font-heading font-semibold text-[#333333]">Markostal</span>
+                <span className="font-heading font-semibold text-[#333333]">Invest Solar</span>
                 <span className="text-gray-500">|</span>
-                <span className="text-gray-600">Branża budowlana</span>
+                <span className="text-gray-600">Branża OZE</span>
               </div>
 
               {/* Title */}
               <h1 className={`font-heading font-black text-5xl md:text-6xl lg:text-7xl mb-8 transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}>
-                <span className="bg-gradient-to-br from-[#333333] via-[#C11369] to-[#049FE3] bg-clip-text text-transparent">
-                  5300+ leadów
+                <span className="bg-gradient-to-br from-green-500 to-[#049FE3] bg-clip-text text-transparent">
+                  Od 0 do 2 miliona zł + obrotu
                 </span>
                 <span className="block text-3xl md:text-4xl lg:text-5xl text-[#333333] mt-4">
-                  w 10 miesięcy dla garaży blaszanych
+                  w 6 miesięcy dla firmy z branży OZE
                 </span>
               </h1>
 
               {/* Excerpt */}
               <p className="font-body text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed">
-                Historia transformacji firmy z branży budowlanej, która przestała konkurować ceną 
-                i zaczęła budować wartość dla klienta.
+Historia transformacji firmy z branży OZE, która przestała przepalać budżet reklamowy 
+i zaczęła generować leady prowadzące do rzeczywistej sprzedaży.
               </p>
 
               {/* Key metrics */}
@@ -175,7 +181,7 @@ export default function MarkostalCaseStudy() {
                       isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                     }`}
                   >
-                    <div className="text-3xl md:text-4xl font-heading font-bold bg-gradient-to-r from-[#C11369] to-[#049FE3] bg-clip-text text-transparent">
+                    <div className="text-3xl md:text-4xl font-heading font-bold bg-gradient-to-r from-green-500 to-[#049FE3] bg-clip-text text-transparent">
                       {result.value}
                     </div>
                     <div className="text-[#333333] font-semibold mt-1">{result.label}</div>
@@ -194,12 +200,13 @@ export default function MarkostalCaseStudy() {
               <blockquote className="relative">
                 <div className="absolute -top-8 -left-4 text-8xl text-[#C11369]/20 font-serif">"</div>
                 <p className="font-heading text-2xl md:text-3xl text-[#333333] font-medium italic leading-relaxed">
-                  Mamy zapytania o garaże, ale nie wiemy skąd przychodzą. 
-                  Kampanie chodzą, ale chcemy to robić lepiej.
+                  Wydaję 10 000 zł miesięcznie na reklamy, ale nie widzę efektów. 
+                  Mam wrażenie, że pieniądze idą w błoto, a ja nie mam pojęcia, 
+                  co się dzieje z tymi kampaniami. Potrzebuje leadów.
                 </p>
                 <footer className="mt-6">
                   <div className="font-body text-gray-600">
-                    — Właściciel Markostalu, pierwsza rozmowa (listopad 2024)
+                    — Właściciel Invest Solar, pierwsza rozmowa (maj 2023)
                   </div>
                 </footer>
               </blockquote>
@@ -213,15 +220,14 @@ export default function MarkostalCaseStudy() {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#333333] mb-6">
-                  Diagnoza: klasyczne problemy branży budowlanej
+                  Diagnoza: 10 tysięcy złotych w błoto
                 </h2>
                 <p className="font-body text-xl text-gray-600 max-w-3xl mx-auto">
-                  Kiedy przeanalizowałem ich obecną sytuację, zobaczyłem obraz, 
-                  który znam z dziesiątek podobnych firm.
+                  Kiedy przeanalizowałem ich obecną sytuację w czerwcu 2023 roku, zobaczyłem klasyczny przykład marnotrawstwa budżetu reklamowego znanego z setek firm usługowych w Polsce.
                 </p>
               </div>
 
-              {/* Before Screenshot */}
+              {/* Before Screenshot 
               <div className="mb-12">
                 <div className="bg-gradient-to-br from-red-500/10 to-orange-500/10 rounded-3xl p-2">
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl">
@@ -241,7 +247,7 @@ export default function MarkostalCaseStudy() {
                 <p className="text-center mt-4 font-body text-gray-600 italic">
                   "Witamy na stronie Markostal" - zero wartości dla klienta, zero skupienia na jego potrzebach
                 </p>
-              </div>
+              </div>*/}
 
               <div className="grid md:grid-cols-2 gap-6">
                 {problems.map((problem, index) => (
@@ -267,10 +273,8 @@ export default function MarkostalCaseStudy() {
 
               <div className="mt-12 p-8 bg-gradient-to-br from-gray-50 to-white rounded-3xl border border-gray-200">
                 <p className="font-body text-lg text-gray-700 leading-relaxed">
-                  <span className="font-bold text-[#333333]">Najgorsze było to,</span> że nie mieli żadnej porządnej analityki. 
-                  Nie wiedzieli, które kampanie generują zapytania, które słowa kluczowe działają, 
-                  a które tylko spalają budżet. <span className="italic">To jak jazda samochodem z zakleionym licznikiem 
-                  - może jakoś dojedziemy, ale raczej wpadniemy w drzewo.</span>
+                  <span className="font-bold text-[#333333]">Najgorsze było to,</span> że poprzednia agencja raportowała sukces. 
+                  <span className="italic">"Mamy świetne zasięgi!", "CTR rośnie!", "Kampanie działają!".</span> Tyle że gdy właściciel patrzył na konto bankowe, tam nic się nie działo. Nikt nie śledził najważniejszej metryki - <span className="font-bold text-[#333333]">ile kampanie generują rzeczywistej sprzedaży</span>.
                 </p>
               </div>
             </div>
@@ -286,7 +290,7 @@ export default function MarkostalCaseStudy() {
                   Nasza strategia: od fundamentów do skalowania
                 </h2>
                 <p className="font-body text-xl text-gray-600 max-w-3xl mx-auto">
-                  Rozpoczęliśmy od tego, od czego zawsze zaczynam - głębokiej analizy klienta końcowego.
+                  Rozpoczęliśmy od tego, od czego zawsze zaczynamy - głębokiej analizy klienta końcowego.
                 </p>
               </div>
 
@@ -321,61 +325,7 @@ export default function MarkostalCaseStudy() {
                 ))}
               </div>
 
-              {/* Screenshots Section - After Solutions */}
-              <div className="mt-20">
-                <h3 className="font-heading text-3xl font-bold text-[#333333] mb-10 text-center">
-                  Transformacja w praktyce
-                </h3>
-                
-                {/* Before/After Comparison */}
-                <div className="grid lg:grid-cols-2 gap-8 mb-12">
-                  {/* New Website */}
-                  <div className="relative group">
-                    <div className="bg-gradient-to-br from-green-500/10 to-[#049FE3]/10 rounded-3xl p-2">
-                      <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                        <div className="absolute top-4 left-4 z-10 bg-gradient-to-r from-green-500 to-[#049FE3] text-white px-4 py-2 rounded-full font-heading font-bold text-sm">
-                          PO - Nowa strona
-                        </div>
-                        <Image
-                          src="/markostal-nowa-www.webp"
-                          alt="Nowa strona Markostal - po optymalizacji"
-                          width={800}
-                          height={600}
-                          className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
-                        />
-                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-6">
-                          <p className="text-white font-heading font-semibold">
-                            Skupienie na potrzebach klienta
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Configurator */}
-                  <div className="relative group">
-                    <div className="bg-gradient-to-br from-[#C11369]/10 to-[#049FE3]/10 rounded-3xl p-2">
-                      <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                        <div className="absolute top-4 left-4 z-10 bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white px-4 py-2 rounded-full font-heading font-bold text-sm">
-                          Konfigurator produktu
-                        </div>
-                        <Image
-                          src="/markostal-konfigurator.webp"
-                          alt="Konfigurator garaży Markostal"
-                          width={800}
-                          height={600}
-                          className="w-full h-auto group-hover:scale-105 transition-transform duration-700"
-                        />
-                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-6">
-                          <p className="text-white font-heading font-semibold">
-                            Prosty formularz = 100% kwalifikacji
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            
             </div>
           </div>
         </section>
@@ -389,7 +339,7 @@ export default function MarkostalCaseStudy() {
                   Progres w liczbach
                 </h2>
                 <p className="font-body text-xl text-gray-600">
-                  10 miesięcy systematycznego wzrostu
+                  6 miesięcy systematycznego wzrostu
                 </p>
               </div>
 
@@ -446,12 +396,12 @@ export default function MarkostalCaseStudy() {
                   </div>
                   <div>
                     <h3 className="font-heading text-2xl font-bold text-[#333333] mb-4">
-                      Lekcja o konfiguratorze 3D
+                      Lekcja o oferie wabik i video marketingu
                     </h3>
                     <p className="font-body text-lg text-gray-700 leading-relaxed mb-4">
-                      W trakcie współpracy wdrożyliśmy, testowaliśmy i udostępniliśmy klientom konfigurator 3D. 
-                      Wyglądał świetnie, ludzie uwielbiają się bawić takimi gadżetami, ale... właśnie - <span className="font-bold">bawić</span>.
-                    </p>
+                      Pod koniec sierpnia 2023 roku przekonałem klienta do wprowadzenia nowej, bardzo atrakcyjnej oferty promocyjnej na panele fotowoltaiczne. Pełniła rolę "wabika" - przyciągała uwagę ceną, ale pozwalała rozpocząć rozmowę o pełnym rozwiązaniu.
+
+Drugą kluczową zmianą było przygotowanie serii rolek (reels) do kampanii płatnych. To był strzał w dziesiątkę. Video pokazywały nie techniczne parametry, ale realne korzyści - rodziny z niższymi rachunkami, piękne instalacje, proces montażu budujący zaufanie. Rezultat? Z 213 kontaktów w lipcu-sierpniu do 611 we wrześniu-listopadzie, z czego 95% kwalifikowanych.                    </p>
                     <p className="font-body text-lg text-gray-700 leading-relaxed">
                       Większość osób klikała z ciekawości, projektowała garaże "dla zabawy", zostawiała dane i nigdy nie miała zamiaru nic kupować.
                       <span className="font-bold text-[#333333]"> Szybko zmieniłem podejście na prosty formularz z opcjami do wyboru.</span> Mniej efektowny, 
@@ -492,7 +442,7 @@ export default function MarkostalCaseStudy() {
                   Wyniki mówią same za siebie
                 </h2>
                 <p className="font-body text-xl text-gray-600 max-w-3xl mx-auto">
-                  Sierpień 2025 roku - czas podsumowań. Wyniki przeszły nasze najśmielsze oczekiwania.
+                  Styczeń 2024 roku - czas podsumowań. Wyniki przeszły nasze najśmielsze oczekiwania.
                 </p>
               </div>
 
@@ -500,7 +450,7 @@ export default function MarkostalCaseStudy() {
                 <div className="bg-white rounded-3xl p-8 text-center shadow-xl border-2 border-[#C11369]/20">
                   <Package className="w-12 h-12 text-[#C11369] mx-auto mb-4" />
                   <div className="font-heading text-5xl font-bold bg-gradient-to-r from-[#C11369] to-[#049FE3] bg-clip-text text-transparent mb-2">
-                    5300+
+                    1127
                   </div>
                   <div className="font-body text-gray-600">kwalifikowanych leadów</div>
                 </div>
@@ -508,7 +458,7 @@ export default function MarkostalCaseStudy() {
                 <div className="bg-white rounded-3xl p-8 text-center shadow-xl border-2 border-[#049FE3]/20">
                   <Euro className="w-12 h-12 text-[#049FE3] mx-auto mb-4" />
                   <div className="font-heading text-5xl font-bold bg-gradient-to-r from-[#049FE3] to-[#C11369] bg-clip-text text-transparent mb-2">
-                    10-25 zł
+                    10-35 zł
                   </div>
                   <div className="font-body text-gray-600">średni koszt pozyskania</div>
                 </div>
@@ -516,16 +466,16 @@ export default function MarkostalCaseStudy() {
                 <div className="bg-white rounded-3xl p-8 text-center shadow-xl border-2 border-green-500/20">
                   <TrendingUp className="w-12 h-12 text-green-500 mx-auto mb-4" />
                   <div className="font-heading text-5xl font-bold text-green-500 mb-2">
-                    530+
+                    10+
                   </div>
-                  <div className="font-body text-gray-600">leadów miesięcznie</div>
+                  <div className="font-body text-gray-600">transakcji miesięcznie</div>
                 </div>
               </div>
 
               <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-10 text-white">
                 <blockquote className="text-center">
                   <p className="font-heading text-2xl md:text-3xl mb-6 italic">
-                    "Właściciel Markostalu bardzo szybko zapomniał o wcześniejszych 
+                    "Właściciel Invest Solar bardzo szybko zapomniał o wcześniejszych 
                     problemach z marketingiem i pozyskiwaniem leadów."
                   </p>
                   <footer className="font-body text-gray-400">
@@ -569,9 +519,7 @@ export default function MarkostalCaseStudy() {
                 Czy ta strategia sprawdzi się w Twojej branży?
               </h2>
               <p className="font-body text-xl text-gray-700 mb-8 leading-relaxed">
-                Historia Markostalu to nie przypadek. Ten sam model - analiza klienta, 
-                copywriting skupiony na potrzebach, konfigurator produktu, kampanie w trzech 
-                uzupełniających się kanałach - sprawdza się w całej branży B2C z długim procesem decyzyjnym.
+                Historia Invest Solar to nie przypadek. Ten sam model - głęboka analiza klienta, oferta wabik przyciągająca uwagę, video marketing pokazujący realne korzyści, dywersyfikacja na cztery uzupełniające się kanały reklamowe - sprawdza się w całej branży B2C z wysoką wartością transakcji i długim procesem decyzyjnym.
               </p>
               <p className="font-body text-lg text-gray-600 mb-12">
                 Czy sprzedajesz garaże, schody, fotowoltaikę, bramy, czy okna - problemy są podobne. 
@@ -580,7 +528,7 @@ export default function MarkostalCaseStudy() {
               
               <div className="bg-white rounded-3xl p-10 shadow-xl border-2 border-[#C11369]/20">
                 <h3 className="font-heading text-2xl font-bold text-[#333333] mb-4">
-                  Rozpoznajesz problemy Markostalu w swojej firmie?
+                  Rozpoznajesz problemy Invest Solar w swojej firmie?
                 </h3>
                 <p className="font-body text-gray-600 mb-8">
                   Zapraszam na SmartCheck - bezpłatną konsultację. W 45 minut przeanalizujemy Twoje obecne kampanie, 
