@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import AuthorBio from '@/components/AuthorBio'
 import CTASection from '@/components/CTASection'
 import { 
   ArrowLeft, 
@@ -601,6 +602,9 @@ export default function MarkostalCaseStudy() {
             </div>
           </div>
         </section>
+
+                <AuthorBio  />
+        
 
         {/* Navigation */}
         <section className="py-12 border-t border-gray-200">

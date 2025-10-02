@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import AuthorBio from '@/components/AuthorBio'
 import CTASection from '@/components/CTASection'
 import { 
   ChevronRight, 
@@ -426,17 +427,112 @@ export default function EcommerceDE() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-10 text-white">
-                <div className="text-center mb-8">
-                  <Sparkles className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
-                  <h3 className="font-heading text-2xl font-bold mb-4">
-                    Co ciekawe...
-                  </h3>
-                  <p className="font-body text-lg text-gray-300 leading-relaxed">
-                    Algorytm Google sam znalazł najbardziej opłacalne produkty i zaczął je promować mocniej. 
-                    Nie musieliśmy ręcznie zarządzać setkami SKU - Performance Max robił to za nas, 
-                    optymalizując pod ROAS.
-                  </p>
+
+            </div>
+          </div>
+        </section>
+
+        {/* Google Ads Screenshots Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="font-heading text-4xl md:text-5xl font-bold text-[#333333] mb-6">
+                  Potwierdzenie wyników z Google Ads
+                </h2>
+                <p className="font-body text-xl text-gray-600 max-w-3xl mx-auto">
+                  Oto rzeczywiste dane z panelu Google Ads pokazujące każdy etap ścieżki zakupowej
+                </p>
+              </div>
+
+              <div className="space-y-8">
+                {/* Screenshot 1 - Overall Results */}
+                <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-2 shadow-xl border border-gray-200">
+                  <div className="bg-white rounded-2xl overflow-hidden">
+                    <div className="bg-gradient-to-r from-[#049FE3] to-[#C11369] p-4">
+                      <h3 className="font-heading text-xl font-bold text-white flex items-center gap-3">
+                        <BarChart3 className="w-6 h-6" />
+                        Ogólny wynik kampanii w Google Ads
+                      </h3>
+                    </div>
+                    <div className="relative group">
+                      <Image
+                        src="/ecommerce-de1.png"
+                        alt="Ogólny wynik kampanii Google Ads - sprzedaż 105 000 zł"
+                        width={1200}
+                        height={700}
+                        className="w-full h-auto group-hover:scale-[1.02] transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Screenshot 2 - Add to Cart */}
+                <div className="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-2 shadow-xl border border-blue-200">
+                  <div className="bg-white rounded-2xl overflow-hidden">
+                    <div className="bg-gradient-to-r from-blue-500 to-[#049FE3] p-4">
+                      <h3 className="font-heading text-xl font-bold text-white flex items-center gap-3">
+                        <ShoppingCart className="w-6 h-6" />
+                        Potwierdzenie dodań do koszyka
+                      </h3>
+                      <p className="font-body text-sm text-blue-100 mt-1">
+                        4167 dodań na kwotę 339 000 zł
+                      </p>
+                    </div>
+                    <div className="relative group">
+                      <Image
+                        src="/ecommerce-de2.png"
+                        alt="Potwierdzenie dodań do koszyka - 4167 add to cart"
+                        width={1200}
+                        height={700}
+                        className="w-full h-auto group-hover:scale-[1.02] transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Screenshot 3 - Checkout */}
+                <div className="bg-gradient-to-br from-orange-50 to-white rounded-3xl p-2 shadow-xl border border-orange-200">
+                  <div className="bg-white rounded-2xl overflow-hidden">
+                    <div className="bg-gradient-to-r from-orange-500 to-[#C11369] p-4">
+                      <h3 className="font-heading text-xl font-bold text-white flex items-center gap-3">
+                        <Users className="w-6 h-6" />
+                        Potwierdzenie przejść do checkout
+                      </h3>
+                      <p className="font-body text-sm text-orange-100 mt-1">
+                        1320 przejść na kwotę 264 000 zł
+                      </p>
+                    </div>
+                    <div className="relative group">
+                      <Image
+                        src="/ecommerce-de4.png"
+                        alt="Potwierdzenie przejść do checkout - 1320 begin checkout"
+                        width={1200}
+                        height={700}
+                        className="w-full h-auto group-hover:scale-[1.02] transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Info Box */}
+              <div className="mt-12 bg-gradient-to-r from-[#049FE3]/10 to-[#C11369]/10 rounded-3xl p-8 border-2 border-[#049FE3]/20">
+                <div className="flex items-start gap-4">
+                  <CheckCircle className="w-8 h-8 text-green-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="font-heading text-xl font-bold text-[#333333] mb-3">
+                      100% transparentność wyników
+                    </h3>
+                    <p className="font-body text-gray-700 leading-relaxed">
+                      Wszystkie liczby przedstawione w tym case study są <strong>prawdziwe 
+                      i potwierdzone rzeczywistymi danymi z Google Ads</strong>. Wierzymy w pełną 
+                      transparentność - każdy wynik można zweryfikować w panelu reklamowym.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -640,6 +736,8 @@ export default function EcommerceDE() {
             </div>
           </div>
         </section>
+
+        <AuthorBio  />
 
         {/* Navigation */}
         <section className="py-12 border-t border-gray-200">
