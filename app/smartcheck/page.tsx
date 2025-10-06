@@ -7,6 +7,10 @@ import TrustSection from '@/components/TrustSection'
 import ResourcesSection from '@/components/ResourcesSection'
 import { ChevronLeft, ChevronRight, CheckCircle, XCircle, Shield, Target, Zap, Clock, ArrowRight } from 'lucide-react'
 
+export const metadata = {
+  title: 'Bezpłatna konsultacja', // automatycznie stanie się "Blog - Smart Marketing"
+}
+
 export default function SmartCheckPage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isVisible, setIsVisible] = useState(false)

@@ -32,6 +32,10 @@ import {
   Activity
 } from 'lucide-react'
 
+export const metadata = {
+  title: 'Case study e-commerce', // automatycznie stanie się "Blog - Smart Marketing"
+}
+
 export default function EcommerceCyfrowy() {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)

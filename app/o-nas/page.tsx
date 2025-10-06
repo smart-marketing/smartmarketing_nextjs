@@ -6,6 +6,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { CheckCircle, Award, TrendingUp, Brain, Users, Linkedin, Target, BarChart3, Lightbulb, Zap, BookOpen } from 'lucide-react'
 
+export const metadata = {
+  title: 'O nas', // automatycznie stanie się "Blog - Smart Marketing"
+}
+
 export default function AboutPage() {
   const miloszCerts = [
     "Jeden z najlepszych sprzedawców w regionie Bydgoszcz - doświadczenie w sprzedaży bezpośredniej i bankowości",

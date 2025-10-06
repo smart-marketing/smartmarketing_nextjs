@@ -4,6 +4,10 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Mail, CheckCircle, TrendingUp, Target, Globe, Users, ArrowRight, Sparkles } from 'lucide-react'
 
+export const metadata = {
+  title: 'Smartletter', // automatycznie stanie się "Blog - Smart Marketing"
+}
+
 export default function NewsletterPage() {
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)

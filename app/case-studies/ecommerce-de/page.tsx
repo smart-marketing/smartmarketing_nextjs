@@ -28,6 +28,10 @@ import {
   Brain
 } from 'lucide-react'
 
+export const metadata = {
+  title: 'Case study e-commerce DE', // automatycznie stanie się "Blog - Smart Marketing"
+}
+
 export default function EcommerceDE() {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)

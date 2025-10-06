@@ -13,6 +13,8 @@ import ResourcesSection from '@/components/ResourcesSection'
 
 import { ArrowRight, TrendingUp, Target, Clock } from 'lucide-react'
 
+
+
 export default function SmartCommercePage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isVisible, setIsVisible] = useState(false)

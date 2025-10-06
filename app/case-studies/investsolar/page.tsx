@@ -31,6 +31,10 @@ import {
   MessageSquare
 } from 'lucide-react'
 
+export const metadata = {
+  title: 'Case study Invest Solar', // automatycznie stanie się "Blog - Smart Marketing"
+}
+
 export default function MarkostalCaseStudy() {
   const [activeSection, setActiveSection] = useState(0)
   const [isVisible, setIsVisible] = useState(false)

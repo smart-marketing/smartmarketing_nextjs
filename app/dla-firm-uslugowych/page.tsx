@@ -12,6 +12,10 @@ import SmartLeadsFAQ from '@/components/SmartLeadsFAQ'
 import CTASection from '@/components/CTASection'
 import ResourcesSection from '@/components/ResourcesSection'
 
+export const metadata = {
+  title: 'Dla firm usługowych & B2B', // automatycznie stanie się "Blog - Smart Marketing"
+}
+
 
 export default function SmartLeadsPage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })

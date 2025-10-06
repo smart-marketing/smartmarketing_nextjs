@@ -5,6 +5,10 @@ import Footer from '@/components/Footer'
 import Image from 'next/image'
 import { Phone, Mail, MapPin, Clock, Send, MessageCircle, Calendar, Linkedin, Facebook, Instagram, CheckCircle } from 'lucide-react'
 
+export const metadata = {
+  title: 'Kontakt' // automatycznie stanie się "Blog - Smart Marketing"
+}
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',

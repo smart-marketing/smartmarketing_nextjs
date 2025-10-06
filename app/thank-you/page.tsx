@@ -4,6 +4,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { CheckCircle, Phone, Clock, Calendar, Monitor, Lightbulb, Link2, Target, Brain, Youtube, Mail, ArrowRight } from 'lucide-react'
 
+export const metadata = {
+  title: 'Dziękujemy', // automatycznie stanie się "Blog - Smart Marketing"
+}
+
 export default function ThankYouPage() {
   return (
     <>

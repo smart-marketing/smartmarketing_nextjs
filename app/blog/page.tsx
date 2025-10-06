@@ -7,6 +7,8 @@ import Footer from '@/components/Footer'
 import CTASection from '@/components/CTASection'
 import { Calendar, Clock, User, Tag, Search, Filter, ChevronRight, TrendingUp, BookOpen, ArrowRight } from 'lucide-react'
 
+
+
 // Temporary interface until we have real data
 interface Post {
   slug: string
