@@ -536,7 +536,7 @@ Drugą kluczową zmianą było przygotowanie serii rolek (reels) do kampanii pł
                   pokażemy potencjał optymalizacji i opracujemy plan działania na następne 90 dni.
                 </p>
                 <a
-                  href="/#kontakt"
+                  href="/kontakt"
                   className="inline-flex items-center gap-3 bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white px-8 py-4 rounded-full font-heading font-semibold text-lg hover:shadow-2xl transition-all hover:scale-105"
                 >
                   <Zap className="w-5 h-5" />
@@ -550,7 +550,9 @@ Drugą kluczową zmianą było przygotowanie serii rolek (reels) do kampanii pł
             </div>
           </div>
         </section>
-
+        
+                <AuthorBio  />
+        
         {/* Navigation */}
         <section className="py-12 border-t border-gray-200">
           <div className="container mx-auto px-4">

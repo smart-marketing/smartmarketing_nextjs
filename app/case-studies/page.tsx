@@ -41,7 +41,7 @@ export default function CaseStudiesPage() {
       icon: <ShoppingCart className="w-6 h-6" />,
       metrics: {
         label: "ROAS",
-        value: "4.2x"
+        value: "3.2x"
       },
       image: "/case-niemiecki.jpg",
       href: "/case-studies/ecommerce-de"
