@@ -31,9 +31,7 @@ import {
   MessageSquare
 } from 'lucide-react'
 
-export const metadata = {
-  title: 'Case study Invest Solar', // automatycznie stanie się "Blog - Smart Marketing"
-}
+
 
 export default function MarkostalCaseStudy() {
   const [activeSection, setActiveSection] = useState(0)
@@ -174,7 +172,7 @@ export default function MarkostalCaseStudy() {
               {/* Excerpt */}
               <p className="font-body text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed">
 Historia transformacji firmy z branży OZE, która przestała przepalać budżet reklamowy 
-i zaczęła generować leady prowadzące do rzeczywistej sprzedaży.
+i zaczęła generować leady prowadzące do rzeczywistej sprzedaży
               </p>
 
               {/* Key metrics */}

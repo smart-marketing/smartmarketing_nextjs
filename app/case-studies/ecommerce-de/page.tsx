@@ -28,9 +28,7 @@ import {
   Brain
 } from 'lucide-react'
 
-export const metadata = {
-  title: 'Case study e-commerce DE', // automatycznie stanie się "Blog - Smart Marketing"
-}
+
 
 export default function EcommerceDE() {
   const [isVisible, setIsVisible] = useState(false)
@@ -202,7 +200,7 @@ export default function EcommerceDE() {
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}>
                 Historia ekspansji zagranicznej, która pokazuje moc Google Ads i znaczenie 
-                dopracowania każdego elementu sklepu.
+                dopracowania każdego elementu sklepu
               </p>
 
               {/* Key metrics */}

@@ -31,10 +31,6 @@ import {
   MessageSquare
 } from 'lucide-react'
 
-export const metadata = {
-  title: 'Case study Markostal', // automatycznie stanie się "Blog - Smart Marketing"
-}
-
 export default function MarkostalCaseStudy() {
   const [activeSection, setActiveSection] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
@@ -168,7 +164,7 @@ export default function MarkostalCaseStudy() {
               {/* Excerpt */}
               <p className="font-body text-xl md:text-2xl text-gray-600 mb-12 leading-relaxed">
                 Historia transformacji firmy z branży budowlanej, która przestała konkurować ceną 
-                i zaczęła budować wartość dla klienta.
+                i zaczęła budować wartość dla klienta
               </p>
 
               {/* Key metrics */}
