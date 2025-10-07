@@ -4,10 +4,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { CheckCircle, Phone, Clock, Calendar, Monitor, Lightbulb, Link2, Target, Brain, Youtube, Mail, ArrowRight } from 'lucide-react'
 
-export const metadata = {
-  title: 'Dziękujemy', // automatycznie stanie się "Blog - Smart Marketing"
-}
-
 export default function ThankYouPage() {
   return (
     <>
@@ -92,7 +88,7 @@ export default function ThankYouPage() {
               {/* How meeting looks */}
               <div className="bg-gradient-to-br from-[#C11369]/5 to-[#049FE3]/5 rounded-3xl p-6 border border-[#C11369]/20">
                 <h3 className="font-heading text-xl font-bold text-[#333333] mb-4">
-                  Jak będzie wyglądało spotkanie SmartCheck:
+                  Jak będzie wyglądało spotkanie SmartCheck?
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">

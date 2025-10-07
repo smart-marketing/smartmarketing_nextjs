@@ -9,8 +9,6 @@ import ResourcesSection from '@/components/ResourcesSection'
 import CTASection from '@/components/CTASection'
 import TestimonialsSection from '@/components/TestimonialSection'
 
-
-
 export default function Home() {
   return (
     <>

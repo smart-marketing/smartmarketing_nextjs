@@ -7,10 +7,6 @@ import TrustSection from '@/components/TrustSection'
 import ResourcesSection from '@/components/ResourcesSection'
 import { ChevronLeft, ChevronRight, CheckCircle, XCircle, Shield, Target, Zap, Clock, ArrowRight } from 'lucide-react'
 
-export const metadata = {
-  title: 'Bezpłatna konsultacja', // automatycznie stanie się "Blog - Smart Marketing"
-}
-
 export default function SmartCheckPage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isVisible, setIsVisible] = useState(false)
@@ -58,7 +54,7 @@ export default function SmartCheckPage() {
       title: "LIVE ANALIZA NA TWOIM EKRANIE",
       points: [
         "Udostępniasz ekran, analizujemy razem Twoje kampanie",
-        "Sprawdzamy Google Ads, Meta Ads, analitykę, stronę www",
+        "Sprawdzamy Google Ads, Meta Ads, TikTok Ads, analitykę, stronę www",
         "Identyfikujemy błędy które kosztują Cię najwięcej pieniędzy",
         "Wszystko w czasie rzeczywistym, z wyjaśnieniem co i dlaczego"
       ]

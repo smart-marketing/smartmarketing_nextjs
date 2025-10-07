@@ -1,10 +1,6 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
-export const metadata = {
-  title: 'RODO', // automatycznie stanie się "Blog - Smart Marketing"
-}
-
 export default function RodoPage() {
   return (
     <>
@@ -32,7 +28,7 @@ export default function RodoPage() {
               </ul>
 
               <h2 className="font-heading text-2xl font-bold text-[#333333] mt-10 mb-4">
-                Jeśli jesteś moim Kontrahentem
+                Jeśli jesteś moim Kontrahentem:
               </h2>
               <p>
                 Twoje dane osobowe przetwarzam w następujących celach i na następujących podstawach prawnych:

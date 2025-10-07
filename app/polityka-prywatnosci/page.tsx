@@ -136,7 +136,7 @@ export default function PrivacyPolicyPage() {
                 Niniejsza Polityka prywatności może zostać zaktualizowana w przypadku zmiany przepisów prawnych, które mają wpływ na przetwarzanie Twoich danych osobowych lub stosowanie plików cookie.
               </p>
               <p className="font-semibold">
-                Niniejszą Politykę prywatności wprowadzono dnia 7.10.2025 r.
+                Niniejszą Politykę prywatności wprowadzono dnia 8.10.2025 r.
               </p>
             </div>
           </div>

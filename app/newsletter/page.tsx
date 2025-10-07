@@ -4,10 +4,6 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { Mail, CheckCircle, TrendingUp, Target, Globe, Users, ArrowRight, Sparkles } from 'lucide-react'
 
-export const metadata = {
-  title: 'Smartletter', // automatycznie stanie się "Blog - Smart Marketing"
-}
-
 export default function NewsletterPage() {
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -72,12 +68,12 @@ export default function NewsletterPage() {
     {
       icon: <Globe className="w-6 h-6" />,
       title: "Polski rynek",
-      description: "Analizujemy polską rzeczywistość biznesową, nie przepisujemy teorii z zagranicznych źródeł"
+      description: "Analizujemy polską rzeczywistość biznesową dla MŚP, nie przepisujemy teorii z zagranicznych źródeł"
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Od praktyków",
-      description: "Piszą Miłosz i Sandra - specjaliści którzy na co dzień prowadzą kampanie dla 15+ firm MŚP"
+      title: "Od praktyka",
+      description: "Pisze Miłosz - specjalista który na co dzień prowadzi kampanie dla 10+ firm MŚP"
     }
   ]
 
