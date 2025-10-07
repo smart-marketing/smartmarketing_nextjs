@@ -12,11 +12,6 @@ import SmartLeadsFAQ from '@/components/SmartLeadsFAQ'
 import CTASection from '@/components/CTASection'
 import ResourcesSection from '@/components/ResourcesSection'
 
-export const metadata = {
-  title: 'Dla firm usługowych & B2B', // automatycznie stanie się "Blog - Smart Marketing"
-}
-
-
 export default function SmartLeadsPage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isVisible, setIsVisible] = useState(false)
@@ -149,7 +144,7 @@ export default function SmartLeadsPage() {
                   <span className="font-body text-xs lg:text-sm text-gray-600">50+ firm</span>
                 </div>
                 <div className="flex items-center gap-1 lg:gap-2">
-                  <span className="font-heading font-bold text-lg lg:text-xl text-[#C11369]">5000+</span>
+                  <span className="font-heading font-bold text-lg lg:text-xl text-[#C11369]">5500+</span>
                   <span className="font-body text-xs lg:text-sm text-gray-600">wygenerowanych leadów</span>
                 </div>
               </div>
