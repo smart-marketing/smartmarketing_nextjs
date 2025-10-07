@@ -32,10 +32,6 @@ import {
   Activity
 } from 'lucide-react'
 
-export const metadata = {
-  title: 'Case study e-commerce', // automatycznie stanie się "Blog - Smart Marketing"
-}
-
 export default function EcommerceCyfrowy() {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
@@ -229,7 +225,7 @@ export default function EcommerceCyfrowy() {
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}>
                 Historia odblokowania konta reklamowego i wzrostu od 30 000 zł do ponad 150 000 zł 
-                miesięcznie przy lepszej rentowności.
+                miesięcznie przy lepszej rentowności
               </p>
 
               {/* Key metrics */}
