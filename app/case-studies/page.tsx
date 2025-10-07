@@ -80,7 +80,7 @@ export default function CaseStudiesPage() {
         value: "+850%"
       },
       image: "/case-polski.jpg",
-      href: "/case-studies/ecommerce-pl"
+      href: "/case-studies/polski-ecommerce"
     }
   ]
 
