@@ -221,7 +221,7 @@ export default function Header() {
             
             {/* CTA Button */}
             <a
-              href="tel:794312947"
+              href="/smartcheck"
               className="block w-full text-center bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white px-5 py-3 rounded-full font-heading font-semibold text-sm hover:shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
               onClick={() => setIsMobileMenuOpen(false)}
             >
