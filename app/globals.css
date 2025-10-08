@@ -478,6 +478,12 @@ body {
   border-radius: 1.5rem;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
+  display: block; 
+  margin: auto;
+}
+
+.blog-content .img-width60{
+width: 60%;
 }
 
 .blog-content img:hover {
