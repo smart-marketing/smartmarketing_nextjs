@@ -13,21 +13,7 @@ import ResourcesSection from '@/components/ResourcesSection'
 
 import { ArrowRight, TrendingUp, Target, Clock } from 'lucide-react'
 
-import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'SmartCommerce - Performance Marketing dla E-commerce',
-  description: 'Zwiększanie sprzedaży e-commerce przez Meta Ads i Google Ads. ROAS 300-800%. Specjalizacja: sklepy internetowe i marketplace.',
-  alternates: {
-    canonical: 'https://agencjasmart.marketing/dla-ecommerce'
-  },
-  openGraph: {
-    title: 'SmartCommerce - Performance Marketing dla E-commerce',
-    description: 'Zwiększanie sprzedaży e-commerce przez Meta Ads i Google Ads. ROAS 300-800%.',
-    url: 'https://agencjasmart.marketing/dla-ecommerce',
-    type: 'website',
-  }
-}
 
 
 

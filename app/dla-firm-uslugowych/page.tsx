@@ -11,21 +11,7 @@ import SmartLeadsCases from '@/components/SmartLeadsCases'
 import SmartLeadsFAQ from '@/components/SmartLeadsFAQ'
 import CTASection from '@/components/CTASection'
 import ResourcesSection from '@/components/ResourcesSection'
-import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'SmartLeads - Performance Marketing dla Firm Usługowych',
-  description: 'Generowanie leadów B2C dla firm usługowych. Meta Ads i Google Ads z gwarancją jakości. Od 3000 zł budżetu reklamowego.',
-  alternates: {
-    canonical: 'https://agencjasmart.marketing/dla-firm-uslugowych'
-  },
-  openGraph: {
-    title: 'SmartLeads - Performance Marketing dla Firm Usługowych',
-    description: 'Generowanie leadów B2C dla firm usługowych. Meta Ads i Google Ads z gwarancją jakości.',
-    url: 'https://agencjasmart.marketing/dla-firm-uslugowych',
-    type: 'website',
-  }
-}
 
 export default function SmartLeadsPage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
