@@ -29,24 +29,27 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [lastScrollY])
 
-  // Blokuj scroll gdy menu jest otwarte
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden'
-      document.body.style.position = 'fixed'
-      document.body.style.width = '100%'
-    } else {
-      document.body.style.overflow = 'unset'
-      document.body.style.position = 'unset'
-      document.body.style.width = 'unset'
-    }
-    
-    return () => {
-      document.body.style.overflow = 'unset'
-      document.body.style.position = 'unset'
-      document.body.style.width = 'unset'
-    }
-  }, [isMobileMenuOpen])
+// Blokuj scroll gdy menu jest otwarte
+useEffect(() => {
+  if (isMobileMenuOpen) {
+    document.body.style.setProperty('overflow', 'hidden', 'important')
+    document.body.style.setProperty('position', 'fixed', 'important')
+    document.body.style.setProperty('width', '100%', 'important')
+    document.body.style.setProperty('top', '0', 'important')
+  } else {
+    document.body.style.removeProperty('overflow')
+    document.body.style.removeProperty('position')
+    document.body.style.removeProperty('width')
+    document.body.style.removeProperty('top')
+  }
+  
+  return () => {
+    document.body.style.removeProperty('overflow')
+    document.body.style.removeProperty('position')
+    document.body.style.removeProperty('width')
+    document.body.style.removeProperty('top')
+  }
+}, [isMobileMenuOpen])
 
   const navItems = [
     { name: 'Home', href: '/' },

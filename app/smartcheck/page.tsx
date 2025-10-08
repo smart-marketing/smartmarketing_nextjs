@@ -238,60 +238,60 @@ export default function SmartCheckPage() {
 
             {/* Mobile Carousel */}
             <div className="md:hidden">
-              <div className="relative overflow-visible">
-                <div 
-                  className="flex transition-transform duration-300 ease-out"
-                  style={{ transform: `translateX(-${currentProblem * 100}%)` }}
-                >
-                  {problems.map((problem, index) => (
-                    <div key={index} className="w-full flex-shrink-0 px-2">
-                      <div className="bg-white rounded-2xl p-6 border-2 border-red-200">
-                        <div className="flex items-start gap-4">
-                          <XCircle className="w-8 h-8 text-red-500 flex-shrink-0 mt-1" />
-                          <div>
-                            <h3 className="font-heading text-lg font-bold mb-3 text-[#333333]">{problem.title}</h3>
-                            <p className="font-body text-gray-600 text-sm">{problem.description}</p>
+              <div className="relative px-2">
+                <div className="overflow-hidden">
+                  <div 
+                    className="flex transition-transform duration-300 ease-out"
+                    style={{ transform: `translateX(-${currentProblem * 100}%)` }}
+                  >
+                    {problems.map((problem, index) => (
+                      <div key={index} className="w-full flex-shrink-0 px-2">
+                        <div className="bg-white rounded-2xl p-6 border-2 border-red-200">
+                          <div className="flex items-start gap-3">
+                            <XCircle className="w-7 h-7 text-red-500 flex-shrink-0 mt-0.5" />
+                            <div className="flex-1 min-w-0">
+                              <h3 className="font-heading text-base font-bold mb-2 text-[#333333] leading-tight">
+                                {problem.title}
+                              </h3>
+                              <p className="font-body text-gray-600 text-sm leading-relaxed">
+                                {problem.description}
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      {/* Preview next card */}
-                      {index < problems.length - 1 && (
-                        <div className="absolute right-0 top-0 w-8 opacity-30 pointer-events-none">
-                          <div className="bg-white rounded-r-2xl h-full shadow" />
-                        </div>
-                      )}
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
-              
-              {/* Carousel Controls */}
-              <div className="flex justify-center items-center gap-4 mt-6">
-                <button
-                  onClick={() => setCurrentProblem(Math.max(0, currentProblem - 1))}
-                  disabled={currentProblem === 0}
-                  className="p-2 rounded-full bg-white border border-gray-200 disabled:opacity-30 hover:bg-gray-50 transition-colors"
-                >
-                  <ChevronLeft className="w-6 h-6 text-gray-600" />
-                </button>
-                <div className="flex gap-2">
-                  {problems.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentProblem(index)}
-                      className={`h-2 rounded-full transition-all ${
-                        currentProblem === index ? 'bg-red-500 w-8' : 'bg-red-200 w-2'
-                      }`}
-                    />
-                  ))}
+                
+                {/* Carousel Controls */}
+                <div className="flex justify-center items-center gap-3 mt-6">
+                  <button
+                    onClick={() => setCurrentProblem(Math.max(0, currentProblem - 1))}
+                    disabled={currentProblem === 0}
+                    className="p-2 rounded-full bg-white border border-gray-200 disabled:opacity-30 hover:bg-gray-50 transition-colors shadow-sm"
+                  >
+                    <ChevronLeft className="w-5 h-5 text-gray-600" />
+                  </button>
+                  <div className="flex gap-2">
+                    {problems.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentProblem(index)}
+                        className={`h-2 rounded-full transition-all ${
+                          currentProblem === index ? 'bg-red-500 w-8' : 'bg-red-200 w-2'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  <button
+                    onClick={() => setCurrentProblem(Math.min(problems.length - 1, currentProblem + 1))}
+                    disabled={currentProblem === problems.length - 1}
+                    className="p-2 rounded-full bg-white border border-gray-200 disabled:opacity-30 hover:bg-gray-50 transition-colors shadow-sm"
+                  >
+                    <ChevronRight className="w-5 h-5 text-gray-600" />
+                  </button>
                 </div>
-                <button
-                  onClick={() => setCurrentProblem(Math.min(problems.length - 1, currentProblem + 1))}
-                  disabled={currentProblem === problems.length - 1}
-                  className="p-2 rounded-full bg-white border border-gray-200 disabled:opacity-30 hover:bg-gray-50 transition-colors"
-                >
-                  <ChevronRight className="w-6 h-6 text-gray-600" />
-                </button>
               </div>
             </div>
 
