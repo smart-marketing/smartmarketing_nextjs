@@ -71,9 +71,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${spaceGrotesk.variable} ${manrope.variable} font-body antialiased`}>
         {children}
       </body>
     </html>
