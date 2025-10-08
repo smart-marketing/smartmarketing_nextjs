@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Space_Grotesk, Manrope } from "next/font/google"
 import "./globals.css"
+import CookieConsent from '@/components/CookieConsent';
 
 const spaceGrotesk = Space_Grotesk({ 
   subsets: ["latin"],
@@ -108,6 +109,7 @@ return (
     </head>
     <body className={`${spaceGrotesk.variable} ${manrope.variable} font-body antialiased`}>
       {children}
+            <CookieConsent />  {/* ⬅️ DODAJ TO */}
     </body>
   </html>
 );
