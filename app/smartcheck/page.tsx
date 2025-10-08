@@ -238,33 +238,27 @@ export default function SmartCheckPage() {
 
             {/* Mobile Carousel */}
             <div className="md:hidden">
-              <div className="relative overflow-visible">
+              <div className="overflow-hidden">
                 <div 
                   className="flex transition-transform duration-300 ease-out"
                   style={{ transform: `translateX(-${currentProblem * 100}%)` }}
                 >
                   {problems.map((problem, index) => (
-                    <div key={index} className="w-full flex-shrink-0 px-2">
+                    <div key={index} className="w-full flex-shrink-0 px-3">
                       <div className="bg-white rounded-2xl p-6 border-2 border-red-200">
-                        <div className="flex items-start gap-4">
-                          <XCircle className="w-8 h-8 text-red-500 flex-shrink-0 mt-1" />
-                          <div>
-                            <h3 className="font-heading text-lg font-bold mb-3 text-[#333333]">{problem.title}</h3>
-                            <p className="font-body text-gray-600 text-sm">{problem.description}</p>
+                        <div className="flex flex-col gap-3">
+                          <div className="flex items-center gap-3">
+                            <XCircle className="w-8 h-8 text-red-500 flex-shrink-0" />
+                            <h3 className="font-heading text-lg font-bold text-[#333333]">{problem.title}</h3>
                           </div>
+                          <p className="font-body text-gray-600 text-sm leading-relaxed">{problem.description}</p>
                         </div>
                       </div>
-                      {/* Preview next card */}
-                      {index < problems.length - 1 && (
-                        <div className="absolute right-0 top-0 w-8 opacity-30 pointer-events-none">
-                          <div className="bg-white rounded-r-2xl h-full shadow" />
-                        </div>
-                      )}
                     </div>
                   ))}
                 </div>
               </div>
-              
+
               {/* Carousel Controls */}
               <div className="flex justify-center items-center gap-4 mt-6">
                 <button
