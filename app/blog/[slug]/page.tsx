@@ -152,7 +152,7 @@ const url = `https://agencjasmart.marketing/blog/${resolvedParams.slug}`
 
               {/* Enhanced animated title */}
               <h1 className="font-heading font-black leading-tight mb-6">
-                <span className="block text-5xl md:text-6xl lg:text-7xl bg-gradient-to-br from-[#333333] via-[#C11369] to-[#049FE3] bg-clip-text text-transparent animate-gradient bg-300">
+                <span className="block text-3xl md:text-6xl lg:text-7xl bg-gradient-to-br from-[#333333] via-[#C11369] to-[#049FE3] bg-clip-text text-transparent animate-gradient bg-300">
                   {post.title}
                 </span>
               </h1>
