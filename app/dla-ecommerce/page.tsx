@@ -13,6 +13,22 @@ import ResourcesSection from '@/components/ResourcesSection'
 
 import { ArrowRight, TrendingUp, Target, Clock } from 'lucide-react'
 
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'SmartCommerce - Performance Marketing dla E-commerce',
+  description: 'Zwiększanie sprzedaży e-commerce przez Meta Ads i Google Ads. ROAS 300-800%. Specjalizacja: sklepy internetowe i marketplace.',
+  alternates: {
+    canonical: 'https://agencjasmart.marketing/dla-ecommerce'
+  },
+  openGraph: {
+    title: 'SmartCommerce - Performance Marketing dla E-commerce',
+    description: 'Zwiększanie sprzedaży e-commerce przez Meta Ads i Google Ads. ROAS 300-800%.',
+    url: 'https://agencjasmart.marketing/dla-ecommerce',
+    type: 'website',
+  }
+}
+
 
 
 export default function SmartCommercePage() {
@@ -166,7 +182,47 @@ export default function SmartCommercePage() {
         <CTASection />
         <ResourcesSection />
 
-
+      {/* Schema.org Breadcrumbs */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Strona główna",
+                  "item": "https://agencjasmart.marketing"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "SmartCommerce - dla e-commerce",
+                  "item": "https://agencjasmart.marketing/dla-ecommerce"
+                }
+              ]
+            })
+          }}
+        />         
+        {/* Schema.org Service */}
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Performance Marketing - SmartCommerce",
+      "provider": {
+        "@type": "Organization",
+        "name": "Smart Marketing"
+      },
+      "areaServed": "PL",
+      "description": "Zwiększanie sprzedaży e-commerce poprzez Meta Ads i Google Ads"
+    })
+  }}
+/>
 
       </main>
       <Footer />

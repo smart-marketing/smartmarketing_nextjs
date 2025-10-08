@@ -1,6 +1,20 @@
 @import "tailwindcss";
 
 
+/* Critical CSS - ładowane najpierw */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+  }
+  
+  body {
+    overflow-y: scroll;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
 
 .font-heading {
   font-family: var(--font-heading);

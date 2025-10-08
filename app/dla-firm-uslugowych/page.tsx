@@ -11,6 +11,21 @@ import SmartLeadsCases from '@/components/SmartLeadsCases'
 import SmartLeadsFAQ from '@/components/SmartLeadsFAQ'
 import CTASection from '@/components/CTASection'
 import ResourcesSection from '@/components/ResourcesSection'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'SmartLeads - Performance Marketing dla Firm Usługowych',
+  description: 'Generowanie leadów B2C dla firm usługowych. Meta Ads i Google Ads z gwarancją jakości. Od 3000 zł budżetu reklamowego.',
+  alternates: {
+    canonical: 'https://agencjasmart.marketing/dla-firm-uslugowych'
+  },
+  openGraph: {
+    title: 'SmartLeads - Performance Marketing dla Firm Usługowych',
+    description: 'Generowanie leadów B2C dla firm usługowych. Meta Ads i Google Ads z gwarancją jakości.',
+    url: 'https://agencjasmart.marketing/dla-firm-uslugowych',
+    type: 'website',
+  }
+}
 
 export default function SmartLeadsPage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -163,6 +178,48 @@ export default function SmartLeadsPage() {
         <ResourcesSection />
 
         {/* Tu możesz dodać więcej sekcji specyficznych dla SmartLeads */}
+
+        {/* Schema.org Breadcrumbs */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Strona główna",
+                  "item": "https://agencjasmart.marketing"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "SmartLeads - dla firm usługowych",
+                  "item": "https://agencjasmart.marketing/dla-firm-uslugowych"
+                }
+              ]
+            })
+          }}
+        />
+        {/* Schema.org Service */}
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Performance Marketing - SmartLeads",
+      "provider": {
+        "@type": "Organization",
+        "name": "Smart Marketing"
+      },
+      "areaServed": "PL",
+      "description": "Generowanie leadów B2C dla firm usługowych poprzez Meta Ads i Google Ads"
+    })
+  }}
+/>
         
       </main>
       <Footer />

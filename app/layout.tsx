@@ -21,8 +21,24 @@ export const metadata: Metadata = {
     default: "Smart Marketing - Agencja Marketingowa dla MŚP | Meta Ads & Google Ads",
     template: "%s | Smart Marketing"
   },
-  description: "Agencja performance marketingu specjalizująca się w Meta Ads i Google Ads. Zwiększamy sprzedaż e-commerce i generujemy leady B2C. Sprawdź nasze rozwiązania SmartLeads i SmartCommerce.",
-  keywords: ["performance marketing", "meta ads", "facebook ads", "google ads", "agencja marketingowa", "leady b2c", "e-commerce marketing", "reklama online"],
+  description: "Smart Marketing - agencja dla MŚP. Zamieniamy chaotyczny marketing w przewidywalne źródło klientów. SmartLeads dla firm usługowych, SmartCommerce dla e-commerce.",
+  keywords: [
+    'agencja marketingowa MŚP',
+    'kampanie Google Ads',
+    'kampanie Meta Ads',
+    'generowanie leadów B2C',
+    'marketing e-commerce',
+    'zwiększenie sprzedaży online',
+    'Google Partner Polska',
+    'optymalizacja kampanii',
+    'audyt Google Ads',
+    'SmartLeads',
+    'SmartCommerce',
+    'bezpłatna konsultacja marketingowa',
+    'leady dla firm usługowych',
+    'ROAS sklep internetowy',
+    'agencja Elbląg'
+  ],
   authors: [{ name: "Smart Marketing" }],
   creator: "Smart Marketing",
   openGraph: {
@@ -31,20 +47,20 @@ export const metadata: Metadata = {
     url: "https://agencjasmart.marketing",
     siteName: "Smart Marketing",
     title: "Smart Marketing - Agencja Marketingowa dla MŚP",
-    description: "Specjalizujemy się w Meta Ads i Google Ads. Zwiększamy sprzedaż e-commerce i generujemy leady B2C.",
+    description: "Smart Marketing - agencja dla MŚP. Zamieniamy chaotyczny marketing w przewidywalne źródło klientów. SmartLeads dla firm usługowych, SmartCommerce dla e-commerce.",
     images: [
       {
-        url: "/og-image.png", // Stwórz ten obrazek 1200x630px
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Smart Marketing - Agencja Marketingowa dla MŚP",
       },
     ],
   },
-  twitter: {
+    twitter: {
     card: "summary_large_image",
     title: "Smart Marketing - Agencja Marketingowa dla MŚP",
-    description: "Specjalizujemy się w Meta Ads i Google Ads. Zwiększamy sprzedaż e-commerce i generujemy leady B2C.",
+    description: "Smart Marketing - agencja dla MŚP. Zamieniamy chaotyczny marketing w przewidywalne źródło klientów. SmartLeads dla firm usługowych, SmartCommerce dla e-commerce.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -69,13 +85,32 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="pl">
-      <body className={`${spaceGrotesk.variable} ${manrope.variable} font-body antialiased`}>
-        {children}
-      </body>
-    </html>
-  );
+return (
+  <html lang="pl">
+    <head>
+      {/* Preconnect dla Google Fonts - ultra szybkie ładowanie */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      {/* Preload logo */}
+      <link rel="preload" href="/logo.webp" as="image" type="image/webp" />
+       {/* DNS Prefetch dla external resources */}
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+  <link rel="dns-prefetch" href="https://connect.facebook.net" />
+  
+  {/* Preconnect dla krytycznych zasobów */}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+  
+  {/* Preload krytycznych zasobów */}
+  <link rel="preload" href="/logo.webp" as="image" type="image/webp" />
+  <link rel="preload" href="/og-image.png" as="image" type="image/png" />
+    </head>
+    <body className={`${spaceGrotesk.variable} ${manrope.variable} font-body antialiased`}>
+      {children}
+    </body>
+  </html>
+);
 }
 
 <script

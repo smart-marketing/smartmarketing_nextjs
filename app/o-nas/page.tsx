@@ -5,7 +5,21 @@ import ResourcesSection from '@/components/ResourcesSection'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CheckCircle, Award, TrendingUp, Brain, Users, Linkedin, Target, BarChart3, Lightbulb, Zap, BookOpen } from 'lucide-react'
+import type { Metadata } from 'next'
 
+export const metadata: Metadata = {
+  title: 'O nas - Smart Marketing | Agencja Performance Marketingu',
+  description: 'Poznaj zespół Smart Marketing. Specjalizujemy się w Meta Ads i Google Ads dla MŚP. 50+ zadowolonych klientów, średnio 4.9/5 gwiazdek.',
+  alternates: {
+    canonical: 'https://agencjasmart.marketing/o-nas'
+  },
+  openGraph: {
+    title: 'O nas - Smart Marketing',
+    description: 'Poznaj zespół Smart Marketing. Specjalizujemy się w Meta Ads i Google Ads dla MŚP.',
+    url: 'https://agencjasmart.marketing/o-nas',
+    type: 'website',
+  }
+}
 
 export default function AboutPage() {
   const miloszCerts = [

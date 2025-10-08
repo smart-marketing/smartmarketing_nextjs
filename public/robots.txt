@@ -1,4 +1,17 @@
+# Zezwól wszystkim botom
 User-agent: *
 Allow: /
 
+# Blokuj strony z parametrami (jeśli będą)
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+
+# Sitemap
 Sitemap: https://agencjasmart.marketing/sitemap.xml
+
+# Crawl-delay dla agresywnych botów
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10

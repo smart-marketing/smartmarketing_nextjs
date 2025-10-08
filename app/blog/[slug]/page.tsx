@@ -152,7 +152,7 @@ const url = `https://agencjasmart.marketing/blog/${resolvedParams.slug}`
 
               {/* Enhanced animated title */}
               <h1 className="font-heading font-black leading-tight mb-6">
-                <span className="block text-3xl md:text-6xl lg:text-7xl bg-gradient-to-br from-[#333333] via-[#C11369] to-[#049FE3] bg-clip-text text-transparent animate-gradient bg-300">
+                <span className="block text-3xl md:text-4xl lg:text-5xl bg-gradient-to-br from-[#333333] via-[#C11369] to-[#049FE3] bg-clip-text text-transparent animate-gradient bg-300">
                   {post.title}
                 </span>
               </h1>
@@ -400,6 +400,37 @@ const url = `https://agencjasmart.marketing/blog/${resolvedParams.slug}`
             </Link>
           </div>
         </div>
+        {/* Schema.org Article */}
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "description": post.excerpt,
+      "image": post.image ? `https://agencjasmart.marketing${post.image}` : "https://agencjasmart.marketing/og-image.png",
+      "datePublished": post.date,
+      "dateModified": post.date,
+      "author": {
+        "@type": "Person",
+        "name": post.author
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Smart Marketing",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://agencjasmart.marketing/logo.webp"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://agencjasmart.marketing/blog/${post.slug}`
+      }
+    })
+  }}
+/>
       </article>
 
       <CTASection />
