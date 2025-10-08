@@ -29,27 +29,28 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [lastScrollY])
 
-// Blokuj scroll gdy menu jest otwarte
 useEffect(() => {
-  if (isMobileMenuOpen) {
-    document.body.style.setProperty('overflow', 'hidden', 'important')
-    document.body.style.setProperty('position', 'fixed', 'important')
-    document.body.style.setProperty('width', '100%', 'important')
-    document.body.style.setProperty('top', '0', 'important')
-  } else {
-    document.body.style.removeProperty('overflow')
-    document.body.style.removeProperty('position')
-    document.body.style.removeProperty('width')
-    document.body.style.removeProperty('top')
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY
+    
+    // Hide top bar on scroll down, show on scroll up
+    if (currentScrollY > 100) {
+      setHideTopBar(currentScrollY > lastScrollY)
+    } else {
+      setHideTopBar(false)
+    }
+    
+    setIsScrolled(currentScrollY > 20)
+    setLastScrollY(currentScrollY)
   }
   
-  return () => {
-    document.body.style.removeProperty('overflow')
-    document.body.style.removeProperty('position')
-    document.body.style.removeProperty('width')
-    document.body.style.removeProperty('top')
+  // Don't handle scroll when menu is open
+  if (!isMobileMenuOpen) {
+    window.addEventListener('scroll', handleScroll)
   }
-}, [isMobileMenuOpen])
+  
+  return () => window.removeEventListener('scroll', handleScroll)
+}, [lastScrollY, isMobileMenuOpen])
 
   const navItems = [
     { name: 'Home', href: '/' },
@@ -153,13 +154,16 @@ useEffect(() => {
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
-      {isMobileMenuOpen && (
-        <div 
-          className="fixed inset-0 bg-black/50 z-30 lg:hidden"
-          onClick={() => setIsMobileMenuOpen(false)}
-        />
-      )}
+{/* Mobile Menu Overlay */}
+{isMobileMenuOpen && (
+  <div 
+    className="fixed inset-0 bg-black/50 z-30 lg:hidden"
+    onClick={(e) => {
+      e.stopPropagation()
+      setIsMobileMenuOpen(false)
+    }}
+  />
+)}
 
       {/* Mobile Menu */}
       <div
