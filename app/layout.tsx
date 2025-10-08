@@ -77,3 +77,32 @@ export default function RootLayout({
     </html>
   );
 }
+
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Smart Marketing",
+      "url": "https://agencjasmart.marketing",
+      "logo": "https://agencjasmart.marketing/logo.png",
+      "description": "Agencja marketingowa dla MŚP specjalizująca się w Meta Ads i Google Ads",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "PL"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+48-794-312-947",
+        "contactType": "customer service",
+        "email": "info@agencjasmart.marketing",
+        "availableLanguage": ["pl"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/smartmarketing",
+        "https://www.linkedin.com/company/smartmarketing"
+      ]
+    })
+  }}
+/>
