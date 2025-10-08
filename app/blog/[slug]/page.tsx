@@ -1,3 +1,5 @@
+"use client"
+
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
