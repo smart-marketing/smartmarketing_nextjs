@@ -396,9 +396,11 @@ export default function SmartCheckPage() {
               JAK WYGLĄDA SMARTCHECK - KROK PO KROKU
             </h2>
 
+         
             {/* Step Navigator */}
-            <div className="flex justify-center mb-12 overflow-x-auto pb-4">
-              <div className="inline-flex gap-2 bg-white rounded-full p-2 shadow-lg">
+            <div className="mb-12 overflow-x-auto scrollbar-hide pb-4 -mx-4 px-4">
+              <div className="flex justify-center">
+                <div className="inline-flex gap-2 bg-white rounded-full p-2 shadow-lg min-w-min">
                 {steps.map((step, index) => (
                   <button
                     key={index}
@@ -412,6 +414,7 @@ export default function SmartCheckPage() {
                     Krok {step.number}
                   </button>
                 ))}
+              </div>
               </div>
             </div>
 
