@@ -16,20 +16,38 @@ export default function ContactPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+  setIsSubmitting(true)
+  
+  try {
+    const response = await fetch('/api/contact-page', {  // ⬅️ ZMIEŃ TUTAJ
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: formData.email,
+        phone: formData.phone,
+        business: formData.business,
+        name: formData.name,
+        company: formData.company,
+        message: formData.message
+      })
+    })
     
-    // Symulacja wysyłki
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    const data = await response.json()
     
-    console.log('Form submitted:', formData)
+    if (response.ok) {
+      window.location.href = '/thank-you'
+    } else {
+      alert(data.error || 'Wystąpił błąd. Spróbuj ponownie.')
+      setIsSubmitting(false)
+    }
+  } catch (error) {
+    console.error('Contact form error:', error)
+    alert('Wystąpił błąd. Spróbuj ponownie.')
     setIsSubmitting(false)
-    
-    // Przekierowanie na thank you page
-    window.location.href = '/thank-you'
   }
-
+}
   const contactMethods = [
     {
       icon: <Phone className="w-6 h-6" />,
