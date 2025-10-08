@@ -390,91 +390,160 @@ export default function SmartCheckPage() {
         </section>
 
         {/* Process Section */}
-        <section className="py-16 md:py-24 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12">
-              JAK WYGLĄDA SMARTCHECK - KROK PO KROKU
-            </h2>
+<section className="py-16 md:py-24 px-4 bg-gradient-to-br from-blue-50 to-indigo-50">
+  <div className="max-w-7xl mx-auto">
+    <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 md:mb-12">
+      SMARTCHECK - KROK PO KROKU
+    </h2>
 
-         
-            {/* Step Navigator */}
-            <div className="mb-12 overflow-x-auto scrollbar-hide pb-4 -mx-4 px-4">
-              <div className="flex justify-center">
-                <div className="inline-flex gap-2 bg-white rounded-full p-2 shadow-lg min-w-min">
-                {steps.map((step, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentStep(index)}
-                    className={`px-6 py-3 rounded-full font-heading font-semibold transition-all whitespace-nowrap ${
-                      currentStep === index
-                        ? 'bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white shadow-lg scale-105'
-                        : 'text-gray-600 hover:bg-gray-100'
-                    }`}
-                  >
-                    Krok {step.number}
-                  </button>
-                ))}
-              </div>
+    {/* Desktop Step Navigator */}
+    <div className="hidden md:flex justify-center mb-12">
+      <div className="inline-flex gap-2 bg-white rounded-full p-2 shadow-lg">
+        {steps.map((step, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentStep(index)}
+            className={`px-6 py-3 rounded-full font-heading font-semibold transition-all whitespace-nowrap ${
+              currentStep === index
+                ? 'bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white shadow-lg scale-105'
+                : 'text-gray-600 hover:bg-gray-100'
+            }`}
+          >
+            Krok {step.number}
+          </button>
+        ))}
+      </div>
+    </div>
+
+    {/* Mobile Step Carousel */}
+    <div className="md:hidden mb-8">
+      <div className="overflow-hidden">
+        <div 
+          className="flex transition-transform duration-300 ease-out"
+          style={{ transform: `translateX(-${currentStep * 100}%)` }}
+        >
+          {steps.map((step, index) => (
+            <div key={index} className="w-full flex-shrink-0 px-3">
+              <div className="bg-white rounded-2xl p-6 shadow-lg border-2 border-blue-200">
+                {/* Step Number Badge */}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-14 h-14 rounded-full bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white flex items-center justify-center text-2xl font-bold shadow-lg flex-shrink-0">
+                      {step.number}
+                    </div>
+                    <div>
+                      <div className="text-xs text-gray-500 font-body">Krok {step.number}</div>
+                      <h3 className="font-heading text-xl font-bold text-[#333333]">
+                        {step.title}
+                      </h3>
+                    </div>
+                  </div>
+                  <span className="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full font-body whitespace-nowrap">
+                    {step.time}
+                  </span>
+                </div>
+                
+                {/* Description */}
+                <p className="font-body text-gray-700 leading-relaxed whitespace-pre-line">
+                  {step.description}
+                </p>
               </div>
             </div>
+          ))}
+        </div>
+      </div>
 
-            {/* Active Step Content */}
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-100">
-                <div className="flex items-start gap-6 mb-8">
-                  <div className="flex-shrink-0">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white flex items-center justify-center text-3xl font-bold shadow-lg">
-                      {steps[currentStep].number}
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex flex-wrap justify-between items-start gap-4 mb-4">
-                      <h3 className="font-heading text-3xl md:text-4xl font-bold text-[#333333]">
-                        {steps[currentStep].title}
-                      </h3>
-                      <span className="text-sm text-gray-500 bg-gray-100 px-4 py-2 rounded-full font-body">
-                        {steps[currentStep].time}
-                      </span>
-                    </div>
-                    <p className="font-body text-lg text-gray-700 whitespace-pre-line leading-relaxed">
-                      {steps[currentStep].description}
-                    </p>
-                  </div>
-                </div>
+      {/* Mobile Navigation */}
+      <div className="flex justify-center items-center gap-3 mt-6">
+        <button
+          onClick={() => setCurrentStep(Math.max(0, currentStep - 1))}
+          disabled={currentStep === 0}
+          className="px-4 py-2 rounded-full bg-white border border-gray-300 disabled:opacity-30 hover:bg-gray-50 transition-colors font-heading text-sm font-semibold flex items-center gap-1"
+        >
+          <ChevronLeft className="w-4 h-4" />
+          Poprzedni
+        </button>
+        
+        <div className="flex gap-2">
+          {steps.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentStep(index)}
+              className={`h-2 rounded-full transition-all ${
+                currentStep === index ? 'bg-gradient-to-r from-[#C11369] to-[#049FE3] w-8' : 'bg-gray-300 w-2'
+              }`}
+            />
+          ))}
+        </div>
+        
+        <button
+          onClick={() => setCurrentStep(Math.min(steps.length - 1, currentStep + 1))}
+          disabled={currentStep === steps.length - 1}
+          className="px-4 py-2 rounded-full bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white disabled:opacity-30 hover:shadow-lg transition-all font-heading text-sm font-semibold flex items-center gap-1"
+        >
+          Następny
+          <ChevronRight className="w-4 h-4" />
+        </button>
+      </div>
+    </div>
 
-                {/* Navigation Arrows */}
-                <div className="flex justify-between items-center pt-6 border-t border-gray-200">
-                  <button
-                    onClick={() => setCurrentStep(Math.max(0, currentStep - 1))}
-                    disabled={currentStep === 0}
-                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-gray-100 hover:bg-gray-200 disabled:opacity-30 disabled:hover:bg-gray-100 transition-colors font-heading font-semibold"
-                  >
-                    <ChevronLeft className="w-5 h-5" />
-                    Poprzedni
-                  </button>
-                  <div className="flex gap-2">
-                    {steps.map((_, index) => (
-                      <div
-                        key={index}
-                        className={`w-2 h-2 rounded-full transition-all ${
-                          currentStep === index ? 'bg-[#049FE3] w-8' : 'bg-gray-300'
-                        }`}
-                      />
-                    ))}
-                  </div>
-                  <button
-                    onClick={() => setCurrentStep(Math.min(steps.length - 1, currentStep + 1))}
-                    disabled={currentStep === steps.length - 1}
-                    className="flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white hover:shadow-lg disabled:opacity-30 transition-all font-heading font-semibold"
-                  >
-                    Następny
-                    <ChevronRight className="w-5 h-5" />
-                  </button>
-                </div>
-              </div>
+    {/* Desktop Active Step Content */}
+    <div className="hidden md:block max-w-4xl mx-auto">
+      <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-100">
+        <div className="flex items-start gap-6 mb-8">
+          <div className="flex-shrink-0">
+            <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white flex items-center justify-center text-3xl font-bold shadow-lg">
+              {steps[currentStep].number}
             </div>
           </div>
-        </section>
+          <div className="flex-1">
+            <div className="flex flex-wrap justify-between items-start gap-4 mb-4">
+              <h3 className="font-heading text-3xl md:text-4xl font-bold text-[#333333]">
+                {steps[currentStep].title}
+              </h3>
+              <span className="text-sm text-gray-500 bg-gray-100 px-4 py-2 rounded-full font-body">
+                {steps[currentStep].time}
+              </span>
+            </div>
+            <p className="font-body text-lg text-gray-700 whitespace-pre-line leading-relaxed">
+              {steps[currentStep].description}
+            </p>
+          </div>
+        </div>
+
+        {/* Desktop Navigation */}
+        <div className="flex justify-between items-center pt-6 border-t border-gray-200">
+          <button
+            onClick={() => setCurrentStep(Math.max(0, currentStep - 1))}
+            disabled={currentStep === 0}
+            className="flex items-center gap-2 px-6 py-3 rounded-full bg-gray-100 hover:bg-gray-200 disabled:opacity-30 disabled:hover:bg-gray-100 transition-colors font-heading font-semibold"
+          >
+            <ChevronLeft className="w-5 h-5" />
+            Poprzedni
+          </button>
+          <div className="flex gap-2">
+            {steps.map((_, index) => (
+              <div
+                key={index}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  currentStep === index ? 'bg-gradient-to-r from-[#C11369] to-[#049FE3] w-8' : 'bg-gray-300'
+                }`}
+              />
+            ))}
+          </div>
+          <button
+            onClick={() => setCurrentStep(Math.min(steps.length - 1, currentStep + 1))}
+            disabled={currentStep === steps.length - 1}
+            className="flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#C11369] to-[#049FE3] text-white hover:shadow-lg disabled:opacity-30 transition-all font-heading font-semibold"
+          >
+            Następny
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
         {/* Guarantee Section - COMMENTED OUT */}
         {/* 
