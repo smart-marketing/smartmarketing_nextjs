@@ -10,25 +10,6 @@ export default function Header() {
   const [hideTopBar, setHideTopBar] = useState(false)
   const [lastScrollY, setLastScrollY] = useState(0)
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY
-      
-      // Hide top bar on scroll down, show on scroll up
-      if (currentScrollY > 100) {
-        setHideTopBar(currentScrollY > lastScrollY)
-      } else {
-        setHideTopBar(false)
-      }
-      
-      setIsScrolled(currentScrollY > 20)
-      setLastScrollY(currentScrollY)
-    }
-    
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [lastScrollY])
-
 useEffect(() => {
   const handleScroll = () => {
     const currentScrollY = window.scrollY
@@ -51,7 +32,6 @@ useEffect(() => {
   
   return () => window.removeEventListener('scroll', handleScroll)
 }, [lastScrollY, isMobileMenuOpen])
-
   const navItems = [
     { name: 'Home', href: '/' },
     { name: 'O nas', href: '/o-nas' },
