@@ -133,7 +133,7 @@ export default function ThankYouPage() {
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500 mt-1" />
                     <p className="font-body text-gray-700">
-                      <span className="font-semibold">Główne wyzwania</span> w marketingu które Cię frustują
+                      <span className="font-semibold">Główne wyzwania i problemy</span> w marketingu które Cię frustują
                     </p>
                   </div>
                 </div>
