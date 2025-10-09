@@ -48,7 +48,8 @@ export default function NewsletterPage() {
       window.dataLayer.push({ event: 'newsletter_signup' }); 
 
 
-      setIsSuccess(true)
+      // Przekieruj na stronę podziękowania
+      window.location.href = '/dziekujemy-za-zapis'
       setEmail('')
     } catch (err: any) {
       setError(err.message || 'Wystąpił błąd. Spróbuj ponownie.')
