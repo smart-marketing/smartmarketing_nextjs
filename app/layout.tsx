@@ -106,6 +106,7 @@ return (
   {/* Preload krytycznych zasobów */}
   <link rel="preload" href="/logo.webp" as="image" type="image/webp" />
   <link rel="preload" href="/og-image.png" as="image" type="image/png" />
+  <meta name="google-site-verification" content="jc3PLdf-kMVAZIbemnqU89npbIj_rY0FZRhM-ce91-M" />
     </head>
     <body className={`${spaceGrotesk.variable} ${manrope.variable} font-body antialiased`}>
       {children}
