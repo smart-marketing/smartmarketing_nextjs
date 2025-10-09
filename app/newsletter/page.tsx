@@ -45,6 +45,9 @@ export default function NewsletterPage() {
         throw new Error(data.error || 'Wystąpił błąd')
       }
 
+      window.dataLayer.push({ event: 'newsletter_signup' }); 
+
+
       setIsSuccess(true)
       setEmail('')
     } catch (err: any) {
