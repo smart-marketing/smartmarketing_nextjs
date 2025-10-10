@@ -32,7 +32,7 @@ export default function SmartCommerceSolution() {
         "Google Ads (PMAX, Shopping, Search) - maksymalna widoczność produktów",
         "Meta Ads (katalogi produktów, DPA, retargeting) - dotarcie do klientów w każdej fazie zakupu",
         "TikTok Ads - produkty lifestyle i consumer (jeśli pasuje do branży)",
-        "Optymalizacja budżetu między platformami w czasie rzeczywistym"
+        "W razie potrzeby stworzenie strony internetowej, landing page lub sklepu"
       ],
       gradient: "from-[#049FE3] to-[#C11369]"
     },

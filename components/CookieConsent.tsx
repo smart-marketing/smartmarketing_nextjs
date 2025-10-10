@@ -121,7 +121,7 @@ export default function CookieConsent() {
           <div className="p-8">
             {!showSettings ? (
               <>
-                <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mb-6">
                   Używamy cookies aby zapewnić najlepsze doświadczenia, analizować ruch i personalizować treści. 
                     Możesz zaakceptować wszystkie cookies lub dostosować ustawienia według własnych preferencji.
                 </p>

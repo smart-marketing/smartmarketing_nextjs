@@ -32,7 +32,7 @@ export default function SmartLeadsSolution() {
         "Google Ads (Search, Display, YouTube) - celowanie w osoby aktywnie szukających",
         "Meta Ads (Facebook, Instagram) - budowanie świadomości i remarketing",
         "TikTok Ads - dotarcie do młodszych grup docelowych (jeśli pasuje)",
-        "Optymalizacja budżetu między platformami w czasie rzeczywistym"
+        "W razie potrzeby stworzenie strony www, landing page lub prostego sklepu"
       ],
       gradient: "from-[#C11369] to-[#049FE3]"
     },
