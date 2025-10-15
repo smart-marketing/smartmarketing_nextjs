@@ -26,7 +26,8 @@ export async function POST(request: Request) {
       },
       body: JSON.stringify({
         email: email,
-        status: 'active'
+        status: 'active',
+        groups: ['Nowi']
       })
     })
 
