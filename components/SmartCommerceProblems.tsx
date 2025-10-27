@@ -57,7 +57,7 @@ export default function SmartCommerceProblems() {
         <div className={`max-w-6xl mx-auto text-center mb-16 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
         }`}>
-          <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-[#333333] mb-6">
+          <h2 className="font-heading text-2xl md:text-3xl lg:text-3xl font-bold text-[#333333] mb-6">
             Najczęściej spotykane <span className="text-red-600">problemy e-commerce</span>, 
             <br className="hidden md:block" />
              z którymi się spotykamy
